@@ -1,0 +1,224 @@
+.single-product
+  .summary 
+    display: flex   
+    flex-wrap: wrap  
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    .price 
+      &:before 
+        content: 'Цена'  
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        margin-right: 17px
+  .price 
+    font-size: 20px
+    line-height: 24px  
+    font-weight: 700
+    margin-right:  64px
+    del 
+      font-weight: 300
+      color: #bdbdbd
+    ins 
+      text-decoration: none  
+    .save-percent
+      display: none  
+    &:after 
+      content: 'руб./шт'
+  
+    
+  .product_title 
+    font-weight: 500
+    font-size: 42px
+    line-height: 51px
+    margin-bottom: 30px
+  
+ 
+  .product-type-variable  
+    .price    
+      display: none
+    .woocommerce-variation-price  
+      .price    
+        display: block
+  .in-stock
+    padding-right: 30px
+    position: relative
+    &:after 
+      content: ''
+      width: 20px
+      height: 20px
+      display: block 
+      position: absolute    
+      background: url('../img/succes_icon.svg') 
+      background-size: cover
+      top: 0
+      right: 0
+  .single_variation_wrap
+    display: flex
+    flex-wrap: wrap
+  .woocommerce-variation.single_variation
+    order: 2  
+    margin-top: 50px
+  .woocommerce-variation-price
+    display: inline-block
+    vertical-align: middle
+    
+  .woocommerce-variation-availability
+    display: inline-block
+    vertical-align: middle          
+  .woocommerce-product-details__short-description
+    margin-bottom: 40px
+    font-size: 16px
+    line-height: 20px  
+    width: 100%
+  .product_meta
+    order: -1
+    
+    .posted_in
+      display: none  
+  .sku_wrapper
+    font-size: 16px
+    line-height: 20px
+    text-align: center
+    color: #A0A0A0
+    margin-bottom: 18px
+    display: block
+    text-align: left
+
+  .yith-wcwl-add-button
+    display: none    
+  .btn__cont
+    display: flex
+    flex-wrap: wrap
+    margin-top: 55px
+    .quantity
+      margin-right: 27px
+    .button, #sbw_wc-adding-button
+      width: 132px
+      border-radius: 10px
+      margin-right: 0
+      margin-left: 0 
+    .btn_void              
+      border: 1px solid #B1CD00
+      background: none 
+      color: #B1CD00 !important
+      margin-left: 27px
+      order: 3
+      &:hover 
+        color: #B1CD00 !important
+  .variations_form 
+    select
+      display: none
+    .reset_variations
+      display: none     
+    tr 
+      display: flex 
+      flex-direction: column
+      .label
+        font-weight: 500
+        font-size: 22px
+        line-height: 27px     
+        padding-bottom: 21px
+  .summary__mob
+    display: none 
+    padding-left: 0
+  .product__grouped__text
+    display: none  
+
+
+
+// груповые товары
+.single-product  
+  .product-type-grouped
+    .summary
+      justify-content: flex-start
+      .price
+        display: none
+    .product__grouped__text
+      display: block
+      font-size: 20px
+      line-height: 24px
+      a
+        white-space: nowrap
+        
+
+@media screen and (max-width: 1720px)	     
+  .single-product
+    .product_title 
+      font-weight: 500
+      font-size: 26px
+      line-height: 30px
+      margin-bottom: 20px
+    .btn__cont
+      width: 100%
+      .quantity
+        width: 131px
+        .quantity-btn
+          width: 40px
+          height: 40px
+        input 
+          font-size: 20px
+          line-height: 25px  
+@media screen and (max-width: 1439px)	  
+  .single-product
+    .btn__cont
+      margin-top: 35px  
+@media screen and (max-width: 1199px)	    
+  .single-product    
+    .btn__cont
+      .quantity
+        margin-right: 150px
+        margin-bottom: 30px
+@media screen and (max-width: 991px)	  
+  .single-product
+    .product_meta
+      display: none
+    .product_title 
+      display: none  
+    .summary__mob
+      display: block
+      .product_title 
+        display: block
+        margin-bottom: 40px
+    .btn__cont
+      .quantity
+        margin-right: 20px
+        margin-bottom: 0
+@media screen and (max-width: 767px)	  
+  .single-product
+    .btn__cont
+      .btn_void
+        margin-left: 20px   
+    .product_title.entry-title
+      font-size: 20px
+      line-height: 24px
+
+
+@media screen and (max-width: 575px)
+  .single-product
+    .price
+      &:after 
+        content: 'руб.'
+    .btn__cont
+      width: 100%
+      .button, #sbw_wc-adding-button
+        width: calc(50% - 10px)
+      .quantity
+        margin-right: 0
+        width: 100%
+        margin-bottom: 30px
+        .quantity-btn
+          width: 30px
+          height: 30px
+        input 
+          width: calc(100% - 60px)
+          font-size: 20px
+          line-height: 25px
+    .radio__cont
+      .custom-checkbox
+        margin-right: 0     
+    .woocommerce-variation.single_variation
+      margin-top: 30px     
+    .woocommerce-variation-price, .woocommerce-variation-availability
+      margin-top: 20px    

@@ -1,0 +1,50 @@
+body 
+  --jivo-cookie-margin: 0px
+
+body.cookie__init  
+  --jivo-cookie-margin: 57px
+  #jvlabelWrap, .__jivoMobileButton
+    transition: 0.4s
+
+#jvlabelWrap
+  bottom: calc(var(--jivo-cookie-margin) + var(--header-bottom-height)) !important
+  
+
+.__jivoMobileButton
+  bottom: calc(var(--jivo-cookie-margin) + var(--header-bottom-height)) !important
+
+
+@media screen and (max-width: 575px)
+  .__jivoMobileButton
+    bottom: 0 !important
+    right: -5px !important
+    &>jdiv
+      &:last-child               
+        width: 32px !important
+        height: 32px !important     
+        &>jdiv 
+          &:first-child
+            z-index: 10
+            width: 13px
+            height: 13px
+            &>jdiv 
+              font-size: 8px
+              font-weight: 400
+              font-family: Formular    
+          &:last-child
+            width: 32px !important
+            height: 32px !important  
+            &>jdiv
+              &:first-child              
+                width: 5px
+                height: 17px
+                background-size: 5px 17px !important 
+              &:last-child               
+                width: 17px
+                height: 15px
+                background-size: 17px 15px !important 
+                background-position: 0 !important
+
+
+
+  

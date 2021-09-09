@@ -1,0 +1,147 @@
+.category__cont
+  .products 
+    justify-content: space-between
+.products 
+  .product-category
+    background: #FFFFFF
+    border: 1px solid #E6ECF5
+    box-sizing: border-box
+    border-radius: 30px
+    width: 260px
+    height: 260px
+    margin-bottom: 20px
+    overflow: hidden
+    padding: 0 !important
+    
+    a 
+      
+      position: relative
+      display: block
+      background: url('../img/checkout__loader.gif')
+      background-repeat: no-repeat
+      background-position: center	
+    a.img-loaded
+      background: none  
+    img 
+      width: 100% !important
+      height: auto !important
+      object-position: 0 51px
+    .woocommerce-loop-category__title
+      font-weight: 400
+      font-size: 16px
+      line-height: 20px
+      position: absolute
+      top: 26px
+      left: 35px
+      .count
+        display: none
+  .product-category__void
+    border: none
+    background: none
+    height: 0 !important
+    margin-bottom: 0 !important
+
+// страница магазина
+.post-type-archive 
+  .products 
+    .product-category  
+      width: 234px
+      height: 234px
+// страница категорий    
+.tax-product_cat 
+  .products 
+    .product-category  
+      width: 175px
+      height: 175px
+      img 
+        object-position: 0 50px  
+      .woocommerce-loop-category__title
+        top: 15px
+        left: 15px 
+@media screen and (max-width: 1720px)  
+  .products 
+    .product-category
+      width: 200px
+      height: 200px
+  // страница магазина
+  .post-type-archive 
+    .products 
+      .product-category  
+        width: 220px
+        height: 220px    
+
+@media screen and (max-width: 1439px)    
+  
+  .products 
+    .product-category
+      width: 175px
+      height: 175px
+      img 
+        object-position: 0 35px  
+      .woocommerce-loop-category__title
+        top: 15px
+        left: 15px  
+  // страница магазина
+  .post-type-archive 
+    .products 
+      .product-category  
+        width: 190px
+        height: 190px      
+  // страница категорий    
+  .tax-product_cat 
+    .products 
+      .product-category  
+        width: 175px
+        height: 175px      
+
+@media screen and (max-width: 1199px)    
+  // страница магазина
+  .post-type-archive 
+    .products 
+      .product-category  
+        width: 170px
+        height: 170px              
+
+@media screen and (max-width: 767px)    
+  .products 
+    .product-category
+      img 
+          object-position: 0 35px  
+  // страница магазина
+  .post-type-archive 
+    .products 
+      .product-category  
+        width: 160px
+        height: 160px     
+         
+        
+  // страница категорий    
+  .tax-product_cat 
+    .products 
+      .product-category  
+        margin-right: 20px
+           
+
+@media screen and (max-width: 575px)    
+  // страница магазина
+  .post-type-archive 
+    .products 
+      .product-category  
+        width: calc(50vw - 20px)
+        height: calc(50vw - 20px)   
+      
+  // страница категорий    
+  .tax-product_cat 
+    .products 
+      .product-category  
+        margin-right: 10px
+        width: 150px
+        height: 150px
+        .woocommerce-loop-category__title
+          font-size: 12px
+          line-height: 14px 
+                                
+  .products 
+    .product-category
+      img 
+        object-position: 0 35px   !important

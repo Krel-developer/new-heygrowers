@@ -1,0 +1,71 @@
+.shipping__btns
+  display: flex
+  background: #fff
+  margin-top: 104px
+  margin-bottom: 20px
+.shipping__btn
+  flex-grow: 1
+  font-weight: 500
+  font-size: 25px
+  line-height: 31px
+  padding: 42px 10px
+  text-align: center  
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+ 
+@media (min-width: 768px)
+  .shipping__btn
+    &:hover:not(.shipping__btn__void)
+      background: #AFD80F
+      color: #fff  
+
+.shipping__btn__void
+  background: #fbfbfb
+  cursor: not-allowed
+  
+  span 
+    &:first-child   
+      text-decoration: line-through
+
+.shipping__btn.active
+  background: #AFD80F
+  color: #fff  
+
+.shipping__desc
+  position: relative
+  background: #fff
+
+.shipping__desc__item
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  opacity: 0
+  transition: 0.4s
+  padding: 20px
+  border: 2px solid #AFD80F
+.shipping__desc__item.active
+  opacity: 1
+  position: static
+
+
+@media screen and (max-width: 1439px)	    
+  .shipping__btn
+    font-size: 20px
+    line-height: 25px
+    padding: 20px 10px
+@media screen and (max-width: 767px)	 
+  .shipping__btns
+    flex-wrap: wrap
+    margin-top: 40px
+  .shipping__desc  
+    margin-bottom: 0
+  .shipping__btn
+    padding: 10px
+    font-size: 18px
+    line-height: 23px
+@media screen and (max-width: 575px)	 
+  .shipping__btn
+    width: 100% 

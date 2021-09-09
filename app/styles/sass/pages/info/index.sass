@@ -1,0 +1,120 @@
+.info
+  h2 
+    font-weight: 500
+    font-size: 30px
+    line-height: 37px  
+    margin-bottom: 20px
+
+.info__left
+  width: 343px
+  margin-right: 78px
+  display: inline-block
+  vertical-align: top
+  a 
+    display: block
+    font-weight: 500
+    font-size: 35px
+    line-height: 43px 
+    margin-bottom: 40px   
+    &.active 
+      color: #B1CD00
+.info__right
+  width: calc(100% - 426px)
+  display: inline-block
+  vertical-align: top
+
+.info__item   
+  display: flex
+  justify-content: space-between
+  img 
+    width: 100%
+.info__item__text
+  font-size: 20px
+  line-height: 24px
+
+
+.info__item__text__min
+  margin-top: 20px
+  font-size: 15px
+  line-height: 18px  
+
+
+
+@media screen and (max-width: 1720px)	    
+  .info
+    h2 
+      font-weight: 500
+      font-size: 25px
+      line-height: 30px  
+      margin-bottom: 20px
+  .info__left
+    width: 220px
+    margin-right: 20px
+    a 
+      font-size: 23px
+      line-height: 28px 
+      margin-bottom: 20px   
+  .info__item__text
+    font-size: 16px
+    line-height: 20px    
+  .info__right
+    width: calc(100% - 302px)    
+
+@media screen and (max-width: 1439px)	   
+  .info 
+    h2 
+      font-size: 20px
+      line-height: 25px
+      margin-bottom: 10px
+  .info__left
+    width: 191px
+    margin-right: 30px
+    a 
+      font-size: 20px
+      line-height: 25px
+
+  .info__right
+    width: calc(100% - 226px)    
+
+  
+@media screen and (max-width: 1199px)	  
+  .info__left
+    width: 100%
+    margin-bottom: 30px
+    display: flex
+    a
+      flex-grow: 1
+      padding: 20px
+      background: #fff
+      justify-content:  center
+      display: flex
+      text-align: center
+      align-items: center
+      &.active 
+        background: #B1CD00
+        color: #fff
+  .info__right
+    width: 100%    
+@media screen and (max-width: 991px)	    
+  .info 
+    h2 
+      margin-bottom: 30px
+  .info__item 
+    flex-wrap: wrap    
+@media screen and (max-width: 767px)	    
+  .info__left
+    a
+      font-size: 16px
+      line-height: 20px
+      padding: 10px
+@media screen and (max-width: 575px)	 
+  .info__left
+    flex-wrap: wrap
+    a
+      flex-grow: 1
+      margin-bottom: 0  
+
+
+@import return
+@import dostavka
+@import contacts

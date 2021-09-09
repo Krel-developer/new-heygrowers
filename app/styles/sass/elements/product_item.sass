@@ -1,0 +1,240 @@
+.hits , .novinki__left
+  .product__btn
+    display: none !important
+.products 
+  display: flex
+  flex-wrap: wrap
+.custom__products
+  .products 
+    .custom__product
+      width: 311px
+      background: #fff
+      transition: box-shadow 0.3s
+      padding: 17px 21px 20px
+      position: relative
+      &:hover
+        box-shadow: 0px 3.64259px 39.1579px rgba(66, 68, 84, 0.08), 0px 0.813621px 8.74642px rgba(79, 76, 100, 0.0476886), 0px 0.242236px 2.60404px rgba(0, 0, 0, 0.0323114)
+        z-index: 10
+      .onsale
+        display: none  
+      .woocommerce-loop-product__title
+        font-size: 14px
+        line-height: 16px
+        color: #676A75
+        font-weight: 400
+        margin: 12px 0
+        height: 33px
+      .save-percent
+        position: absolute
+        top: 17px
+        left: 21px
+        padding: 5px 0
+        font-weight: 500
+        font-size: 13.6597px
+        line-height: 17px
+        color: #FFFFFF
+        width: 50px
+        text-align:  center
+        background: linear-gradient(90deg, #FF5151 0%, #F55B7A 51.25%, #FF535C 88.02%)
+        border-radius: 10px
+      .categories
+        font-size: 14px
+        line-height: 17px
+        color: #BDBDBD  
+      .price 
+        font-weight: bold
+        font-size: 20px
+        line-height: 24px  
+        margin-right: 0 !important
+        order: -1
+        del 
+          position: absolute
+          margin-top: -24px
+          font-weight: 300
+          color: #bdbdbd
+        ins 
+          text-decoration: none  
+        &:after 
+          content: 'руб./шт'
+      .product__info
+        display: flex
+        flex-direction: column   
+        margin-top: 40px 
+      .product__img
+        height: 171px
+        text-align: center
+        background: url('../img/checkout__loader.gif')
+        background-repeat: no-repeat
+        background-position: center	
+        &.img-loaded
+          background: none  
+        img 
+          height: 100%
+          width: auto !important
+      .product__btn
+        margin-top: 25px    
+        display: flex
+        .product_type_variable 
+          width: 100%
+          padding: 9px 20px
+          font-size: 0
+          line-height: 0
+          &::before
+            content: 'Выбрать объем'
+            font-size: 18px
+            line-height: 22px
+        .button   
+          padding: 9px 20px   
+        #sbw_wc-adding-button-archive
+          order: -1
+          
+          width: 178px
+          margin-right: 21px
+          margin-left: 0 !important
+        .ajax_add_to_cart
+          background: url('../img/add_to_cart_icon.svg')
+          background-size: cover
+          background-repeat: no-repeat !important
+          font-size: 0  !important
+          padding: 0
+          width: 40px
+      .added_to_cart
+        display: none    
+      .yith-wcwl-add-to-wishlist
+        margin-top: 0
+        position: absolute  
+        font-size: 0 
+        top: 15px
+        right: 15px
+        a
+          display: block
+          width: 50px
+          height: 50px
+          overflow: hidden
+        .yith-wcwl-wishlistexistsbrowse, .yith-wcwl-add-button, .yith-wcwl-wishlistaddedbrowse
+           
+          background-size: 25px !important
+          background-position: center !important
+          background-repeat: no-repeat !important
+        .yith-wcwl-wishlistexistsbrowse, .yith-wcwl-wishlistaddedbrowse
+          background: url('../img/wishlist_item_icon_active.svg') 
+        .yith-wcwl-add-button  
+          background: url('../img/wishlist_item_icon.svg') 
+    .product-type-grouped
+      .button 
+        width: 100%   
+.custom__product.outofstock  
+  #sbw_wc-adding-button-archive
+    display: none
+  .button
+    width: 100%  
+@media screen and (max-width: 1720px)	      
+  .custom__products
+    .products 
+      .custom__product      
+        width: 308px
+        // padding: 13px 15px 15px
+        // .price 
+        //   font-size: 16px
+        //   line-height: 20px
+        // .product__img
+        //   height: 126px  
+        // .product__btn 
+        //   display: flex
+        //   justify-content: space-between
+        //   #sbw_wc-adding-button-archive
+        //     width: calc(100% - 40px)  
+        //     margin-right: 10px
+        // .categories
+        //   height: 34px  
+        .woocommerce-loop-product__title  
+          height: 48px
+          display: flex
+          align-items: center
+
+
+
+@media screen and (max-width: 1439px)	      
+  .custom__products
+    .products 
+      .custom__product      
+        width: 261px          
+@media screen and (max-width: 1199px)    
+  .custom__products
+    .products 
+      .product
+        padding: 21px 16px 14px
+        width: 186px
+        .price 
+          font-size: 16px
+          line-height: 20px
+          del
+            margin-top: -20px
+        .woocommerce-loop-product__title
+          font-size: 12px
+          line-height: 16px  
+          height: 56px
+          
+        .categories
+          font-size: 12px
+          line-height: 16px
+        .product__img
+          height: 100px
+        .product__info
+          margin-top: 20px  
+        .save-percent
+          font-size: 10px
+          line-height: 12px
+          width: 40px
+          top: 10px
+          left: 16px  
+        .product__btn 
+          display: flex
+          justify-content: space-between
+          #sbw_wc-adding-button-archive
+            width: calc(100% - 40px)  
+            margin-right: 7px
+            
+          .button  
+            font-size: 12px
+            line-height: 16px 
+          .ajax_add_to_cart
+            width: 30px  
+            height: 30px
+            background-size: cover
+          .product_type_variable 
+            &::before
+              font-size: 12px
+              line-height: 16px  
+
+@media screen and (max-width: 991px)    
+  .custom__products
+    .products 
+      .product
+        width: 176px
+
+@media screen and (max-width: 767px)  
+  .custom__products
+    .products 
+      .product
+        width: 170px
+        .yith-wcwl-add-to-wishlist
+          top: 0
+          right: 0
+          a
+            display: block
+            width: 50px
+            height: 50px
+            overflow: hidden
+          .yith-wcwl-wishlistexistsbrowse, .yith-wcwl-add-button, .yith-wcwl-wishlistaddedbrowse            
+            background-size: 20px !important
+
+
+@media screen and (max-width: 576px)     
+  .custom__products
+    .products 
+      .product
+        width: 50%     
+        .price
+          &:after 
+            content: 'руб.'

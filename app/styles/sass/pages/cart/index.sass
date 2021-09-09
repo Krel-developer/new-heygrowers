@@ -1,0 +1,81 @@
+
+@import ./shipping_btns
+@import ./checkout
+@import ./krel_toast
+@import ./thankyou
+@import ./checkout_right
+@import ./coupon
+
+.woocommerce-cart  
+  .wc-backward
+    border-radius: 10px
+    margin-top: 30px
+.wishlist-title h2
+  padding: 0
+.cart__title  
+  display: flex
+  align-items: flex-end
+  margin-bottom: 26px
+  h1  
+    font-weight: 500
+    font-size: 30px
+    line-height: 81%
+    margin-right: 20px
+  span
+    font-size: 15px
+    line-height: 100%
+    color: #676A75  
+
+
+.custom_checkout_cart__left
+  width: 1240px
+  display: inline-block
+  vertical-align: top
+  .woocommerce 
+    &:last-child
+      display: flex
+      flex-wrap: wrap
+
+
+.custom_checkout_cart__right
+  width: 414px   
+  position: sticky
+  display: inline-block
+  vertical-align: top
+  top: var(--header-height)
+  margin-left: 15px
+  margin-top: 50px
+
+.woocommerce-shipping-fields , .shop_table.woocommerce-checkout-review-order-table, .coupon
+  display: none  
+
+.woocommerce-message
+  padding: 20px
+  background: #fff
+  margin-bottom: 40px  
+  width: 100%
+
+
+@media screen and (max-width: 1720px)	  
+  .custom_checkout_cart__left
+    width: 860px
+
+@media screen and (max-width: 1439px)	  
+  .custom_checkout_cart__left
+    width: 760px
+  .custom_checkout_cart__right
+    width: 314px  
+
+  
+@media screen and (max-width: 1199px)   
+  .custom_checkout_cart__left
+    width: 100%
+  .custom_checkout_cart__right
+    width: 100%
+    margin-left: 0
+    position: static  
+
+
+@media screen and (max-width: 767px)   
+  .checkout   
+    padding: 20px

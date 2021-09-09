@@ -1,0 +1,68 @@
+
+.woocommerce-form-coupon-toggle
+  display: none
+
+.checkout_coupon
+  padding: 0 20px
+  transition: 0.4s
+  height: 0
+  overflow: hidden
+  display: block  !important
+  p 
+    margin-bottom: 0
+    &:first-child     
+      width: 100%   
+      margin-bottom: 20px
+  .form-row-first  
+    flex-grow: 1
+    margin-right: 20px
+  .form-row-last
+    width: max-content
+    margin-bottom: 0
+  input 
+    border: 1px solid #E0E0E0
+    box-sizing: border-box
+    border-radius: 5px    
+    display: block
+    padding: 15px
+    font-size: 16px
+    line-height: 20px
+    background: none
+    width: 100%
+    
+  .button
+    display: block
+    border-radius: 10px  
+.coupon__cont
+  background: #fff
+  margin-top: 20px
+  width: 100%
+  .woocommerce-message
+    padding: 20px 0
+    padding-bottom: 0
+    margin-bottom: 0
+  .woocommerce-error
+    margin-top: 5px
+    padding: 0 20px
+.coupon__btn
+  cursor: pointer
+  padding: 20px
+.coupon__form
+  display: flex
+  flex-wrap: wrap
+
+@media screen and (max-width: 575px)   
+  .checkout_coupon 
+    .form-row
+      width: 100%
+    .form-row-first
+      margin-right: 0  
+      margin-bottom: 20px
+    .button
+      width: 100%
+      
+    input
+      padding: 10px
+      margin-right: 0
+      font-size: 16px
+      line-height: 20px  

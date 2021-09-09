@@ -1,0 +1,70 @@
+body
+  --header-height: 172px
+  --header-bottom-height: 0px
+
+.header__cont
+  padding-top: 172px
+.header
+  padding-top: 18px
+  padding-bottom: 33px
+  background: #FFFFFF
+  box-shadow: 0px 1px 4px rgba(66, 68, 84, 0.1)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 1300
+
+.header__menu--active
+  overflow: hidden
+  
+  
+@media screen and (min-width: 992px)	 
+  .header__mini
+    --header-height: 88px
+    .header
+      padding-bottom: 18px
+    .header__top
+      height: 0
+      overflow: hidden
+      margin-bottom: 0
+
+.header__top__mob
+  display: none    
+// кнопка мобильного поиска    
+.dgwt-wcas-om-bar button.dgwt-wcas-om-return, .dgwt-wcas-om-bar button.dgwt-wcas-om-return:active, .dgwt-wcas-om-bar button.dgwt-wcas-om-return:focus, .dgwt-wcas-om-bar button.dgwt-wcas-om-return:hover
+  background: #AFD80F !important
+@media screen and (max-width: 1720px)  and (min-width: 992px)
+  body
+    --header-height: 164px
+  .header__mini
+    --header-height: 72px  
+    .header
+      padding-bottom: 15px
+  .header
+    padding-top: 15px  
+  .header__cont
+    padding-top: 164px  
+@media screen and (max-width: 991px)	
+  .header__top__mob
+    display: block   
+  .header
+    padding: 0
+    height: 0
+    box-shadow: none
+    position: static
+  body
+    --header-height: 74px
+    --header-bottom-height: 80px
+  .header__cont
+    padding-top: var(--header-height) 
+@media screen and (max-width: 767px)	
+  body
+    --header-bottom-height: 90px    
+@media screen and (max-width: 575px)	
+  body
+    --header-height: 60px    
+    --header-bottom-height: 62px
+    
+@import header_top
+@import header_bottom

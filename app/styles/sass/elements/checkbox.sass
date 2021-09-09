@@ -1,0 +1,96 @@
+.custom-checkbox
+  cursor: pointer
+  width: 134px
+  display: inline-block
+  vertical-align: top
+  margin-right: 47px
+  input 
+    position: absolute
+    z-index: -1
+    opacity: 0
+  span 
+    display: inline-flex
+    align-items: center
+    user-select: none
+    font-size: 16px
+    line-height: 20px
+    &:before 
+      content: ''
+      display: inline-block
+      width: 20px
+      height: 20px
+      flex-shrink: 0
+      flex-grow: 0
+      border: 1px solid #DFDFDF
+      box-sizing: border-box
+      margin-right: 30px
+      border-radius: 2px
+
+  input:not(:disabled):not(:checked)+span:hover::before 
+    border-color: #B1CD00
+
+  input:not(:disabled):active+span::before 
+    background-color: #B1CD00
+    border-color: #B1CD00
+
+  input:focus:not(:checked)+span::before 
+    border-color: #B1CD00
+
+  input:checked+span::before 
+    border-color: #B1CD00
+    background-color: #B1CD00
+
+  input:disabled+span::before 
+    background-color: #e9ecef
+
+
+@mixin checkbox() 
+  & 
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+
+  &+label 
+    display: inline-flex
+    align-items: center
+    user-select: none
+    font-size: 16px
+    line-height: 20px
+    cursor: pointer
+    width: 100%
+
+
+  &+label::before 
+    content: ''
+    display: inline-block
+    width: 20px
+    height: 20px
+    flex-shrink: 0
+    flex-grow: 0
+    border: 1px solid #DFDFDF
+    box-sizing: border-box
+    margin-right: 22px
+    border-radius: 2px
+    vertical-align: bottom
+
+
+  &:not(:disabled):not(:checked)+label:hover::before 
+    border-color: #B1CD00
+
+
+  &:not(:disabled):active+label::before 
+    border-color: #B1CD00
+
+
+  &:focus:not(:checked)+label::before 
+    border-color: #B1CD00
+
+
+  &:checked+label::before 
+    background-color: #B1CD00
+
+.input-radio, .woof_checkbox_term 
+  @include checkbox() 
+
+    

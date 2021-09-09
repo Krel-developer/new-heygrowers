@@ -1,0 +1,93 @@
+.single-product 
+  .woocommerce-product-gallery
+    position: relative
+    height:  400px
+
+    
+  .woocommerce-product-gallery__wrapper
+    width: 100%
+    
+  .custom__thumbnails
+    padding-left: 204px
+  .flex-control-nav
+    @include scrollbars(10px, #B1CD00, #fff, 10px) 
+    order: -1
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    overflow-y: hidden
+    width: 202px
+    padding-right: 20px
+    list-style: none
+    li 
+      width: 100%
+      border: 1px solid #B1CD00
+      box-sizing: border-box
+      border-radius: 10px
+      text-align: center
+      margin-bottom: 20px
+      height: calc(33% - 13px)
+      overflow: hidden
+      img 
+        height: 100%
+        padding: 10px  0
+
+  .woocommerce-product-gallery__image
+    height: 400px   
+    overflow: hidden
+    a
+      width: 100%
+      height: 100%
+      display: block  
+      text-align: center
+      img     
+        height: 100%    !important
+        width: auto !important   
+        object-position: 50%
+
+.pswp__bg
+  background: rgba(1,1,1,0.9) !important
+
+@media screen and (max-width: 1720px)	   
+  .single-product 
+    .woocommerce-product-gallery
+      height: 300px
+    .woocommerce-product-gallery__image
+      height: 300px
+    
+    .custom__thumbnails
+      padding-left: 156px  
+    .flex-control-nav
+
+      width: 156px
+
+@media screen and (max-width: 1439px)	   
+  .single-product 
+    
+    .custom__thumbnails
+      padding-left: 135px  
+    .flex-control-nav
+
+      width: 135px    
+      li 
+        display: flex
+        align-items: center
+        justify-content: center
+        img 
+          height: 80%
+          padding: 0
+
+@media screen and (max-width: 1199px)
+  .single-product 
+    .custom__thumbnails
+      padding-left: 0
+    .flex-control-nav
+      display: none
+
+@media screen and (max-width: 575px)  
+  .single-product 
+    .woocommerce-product-gallery
+      height: 320px
+    .woocommerce-product-gallery__image
+      height: 320px    

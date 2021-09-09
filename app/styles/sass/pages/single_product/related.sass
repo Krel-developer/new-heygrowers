@@ -1,0 +1,137 @@
+@media screen and (min-width: 992px)
+  .related
+    .products 
+      padding: 10px
+      margin: -10px
+      height: 669px
+      @include scrollbars(10px, #B1CD00, #fff, 10px) 
+      overflow-y: auto
+    .product
+      padding: 26px 58px 26px 30px
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      .onsale 
+        display: none
+      &:hover
+        box-shadow: 0px 3.64259px 39.1579px rgba(66, 68, 84, 0.08), 0px 0.813621px 8.74642px rgba(79, 76, 100, 0.0476886), 0px 0.242236px 2.60404px rgba(0, 0, 0, 0.0323114)
+      .added_to_cart  
+        display: none
+      .product__img
+        width: 171px
+        height: 171px
+        text-align: center
+        img
+          height: 100%
+          width: auto
+      .woocommerce-LoopProduct-link
+        display: flex
+        flex-wrap: wrap    
+      .product__info
+        width: 236px  
+        margin: 0 17px
+        display: flex
+        flex-direction: column
+      .woocommerce-loop-product__title
+        font-weight: 400
+        font-size: 14px
+        line-height: 16px
+        color: #676A75  
+        margin-bottom: 12px
+        margin-top: 32px
+      .categories
+        font-size: 14px
+        line-height: 17px
+        color: #BDBDBD  
+      .price
+        display: block
+        order: -1
+        margin-top: 21px
+        del 
+          display: none
+        ins 
+          text-decoration: none  
+        &:before
+          display: none
+
+      .product__btn
+        display: flex
+        flex-direction: column
+        .button 
+          width: 132px  
+          font-weight: 500
+          font-size: 16px
+          line-height: 16px
+          padding: 10px 0
+          border-radius: 10px
+        #sbw_wc-adding-button-archive
+          order: -1
+          background: #fff
+          color: #B1CD00 !important
+          border: 1px solid #B1CD00  
+          margin-bottom: 15px
+          margin-right: 0
+          margin-left: 0
+
+@media screen and (max-width: 1720px)	 and (min-width: 992px)
+  .related 
+    .product 
+      padding: 20px 45px 20px 23px
+      .product__img
+        width: 120px
+        height: 120px
+      .product__info
+        width: 182px
+        margin: 0 5px  
+      .price
+        margin-top: 10px  
+@media screen and (max-width: 1439px) and (min-width: 992px)
+  .related 
+    .product 
+      padding: 17px 20px 17px 
+      .product__img
+        width: 120px
+        height: 120px
+      .product__info
+        width: 182px
+        margin: 0 5px  
+      .price
+        margin-top: 10px  
+
+@media screen and (max-width: 1199px)	 and (min-width: 992px)
+  .related 
+
+    .product 
+      padding: 26px 58px 26px 30px 
+      justify-content: space-between
+      .product__img
+        width: 171px 
+        height: 171px   
+      .product__info
+        width: 236px   
+        margin: 0 17px   
+        margin-left: 96px
+
+@media screen and (max-width: 991px)
+  .related
+    padding-left: 0
+    padding-right: 0
+    .related__cont
+      overflow-x: auto
+      padding: 2px
+      margin: -2px
+    .products 
+      padding: 0
+      margin: 0
+      width: max-content
+      .product__btn
+        display: none !important
+      .price
+        &:before 
+          display: none !important  
+@media screen and (max-width: 575px)   
+  .custom__products .related__cont .products .product
+    width: 174px
+
+

@@ -1,0 +1,54 @@
+.krel-popup-wrap 
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  background: rgba(1, 1, 1, 0.8)
+  overflow: auto
+  z-index: 100000000
+  padding: 30px 0
+
+.krel-popup-container 
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+
+.krel-popup-content 
+  border-radius: 10px
+  padding: 20px
+
+
+.krel-popup-btn-close 
+  position: relative
+  margin-top: -10px
+  margin-bottom: -10px
+  
+  display: flex
+  justify-content: flex-end
+  padding: 10px 0 
+
+.krel-popup-btn-close svg 
+  width: 20px
+  height: 20px
+  cursor: pointer
+  opacity: 0.5
+
+.krel-popup-anim-3d 
+  perspective: 800px
+
+.krel-popup-anim-3d .krel-popup-content 
+  transform-style: preserve-3d
+  transform: rotateY(30deg)
+
+.krel-popup-anim-top .krel-popup-content 
+  transform: translateY(-20%)
+
+.krel-popup-btn-close svg:hover 
+  opacity: 1
+
+.krel-popup-btn-close svg rect 
+  fill: #111
+

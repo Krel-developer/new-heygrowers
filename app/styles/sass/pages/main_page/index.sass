@@ -1,0 +1,44 @@
+
+.main__title
+  width: 100%
+  margin-bottom: 20px
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+.main__title__h2
+  font-weight: 400
+  font-size: 36px
+  line-height: 44px  
+.main__title__link
+  &::after
+    content: ''
+    width: 17px
+    height: 14px
+    display: inline-block
+    background: url('../img/link_arrow.svg')
+    background-size: cover
+    vertical-align: middle
+    margin-left: 10px
+
+.hits
+  overflow: hidden
+
+
+@media screen and (max-width: 767px)  
+  .main__title__h2
+    font-size: 25px
+    line-height: 100%
+  .main__title__link
+    font-size: 12px
+    line-height: 15px
+    white-space: nowrap
+    &::after
+      content: ''
+      width: 9px
+      height: 7px
+      margin-left: 6px  
+      background-size: 100% auto
+
+@import popular
+@import ./about
+@import ./novinki

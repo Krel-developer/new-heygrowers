@@ -1,0 +1,133 @@
+
+.checkout
+  padding: 43px 51px 72px 40px
+  margin-top: 24px
+  background: #fff
+  width: 100%
+.checkout.woocommerce-checkout 
+  h3 
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 17px  
+.woocommerce-billing-fields__field-wrapper
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+.form-row
+  margin-bottom: 20px
+  width: calc(50% - 12px)  
+  label 
+    display: none
+  .woocommerce-input-wrapper
+    border: 1px solid #E0E0E0
+    box-sizing: border-box
+    border-radius: 5px    
+    display: block
+    
+    font-size: 16px
+    line-height: 20px
+    
+    overflow: hidden
+    input, textarea
+      border: none
+      padding: 15px
+      width: 100% !important
+      font-size: 16px
+      line-height: 20px
+      font-family: Formular
+    textarea
+      height: 120px  
+#order_comments_field
+  width: 100%
+#billing_first_name_field
+  margin-bottom: 0
+  &::after
+    content: 'Например Иван Иванов'
+    display: block
+    font-size: 13px
+    line-height: 16px
+    color: #A0A0A0
+    padding: 9px 15px
+// #billing_phone_field
+//   .woocommerce-input-wrapper
+//     input
+//       width: calc(100% - 69px) !important
+//     &::before
+//       content: '+7'    
+//       padding: 15px 24px
+//       border-right: 1px solid #E0E0E0
+//       color: #A0A0A0
+#order_review_heading
+  display: none
+#billing_country_field
+  display: none !important
+.woocommerce-privacy-policy-text
+  display: none
+.payment_box
+  padding: 10px    
+.place-order
+  width: 100%  
+.woocommerce-terms-and-conditions-wrapper
+  .form-row
+    width: 100%
+    margin-bottom: 0
+    margin-top: 80px
+  label
+    display: inline
+#place_order
+  display: none      
+
+.wc_payment_methods.payment_methods.methods  
+  display: flex
+  position: relative
+  label
+    margin-right: 20px
+  .payment_box
+    position: absolute
+    left: 0
+.shop_table
+  button
+    display: none    
+
+
+.checkout__map  
+  overflow: hidden
+  transition: 0.4s
+  height: 0
+  width: 100%
+  order: -1
+.checkout__map__text
+  padding: 20px
+  background: #fff
+
+.woocommerce-invalid
+  color: #FF535C
+.woocommerce-invalid-required-field .woocommerce-input-wrapper
+  border: 1px solid #FF535C
+.woocommerce-error
+  margin-bottom: 20px
+  color: #FF535C
+  li 
+    margin-bottom: 15px  
+
+.woocommerce-form-login-toggle
+  display: none
+.woocommerce-terms-and-conditions-wrapper
+  margin-top: 80px
+
+
+@media screen and (max-width: 991px)  
+  .form-row
+    width: 100%
+
+@media screen and (max-width: 575px)      
+  .wc_payment_methods.payment_methods.methods  
+    flex-wrap: wrap
+    li
+      width: 100%
+      margin-bottom: 10px
+    .payment_box
+      position: static  
+  .woocommerce-terms-and-conditions-wrapper .form-row
+    margin-top: 20px    

@@ -1,0 +1,109 @@
+.shop__left
+  h4 
+    font-weight: 500
+    font-size: 22px
+    line-height: 27px
+    margin-bottom: 21px
+  .woof_container 
+    padding: 15px 
+    padding-left: 33px
+    padding-bottom: 23px
+    background: #fff
+    border-radius: 10px
+    margin-bottom: 35px
+  .woof_checkbox_label_selected
+    font-weight: 400 
+    color: #afd80f  
+  .woof_list 
+    li 
+      margin-left: 0 !important
+      margin-right: 0 !important
+
+  .woof_checkbox_label 
+      margin-left: 0    
+  .woof_childs_list_li 
+    .woof_checkbox_label 
+      margin-left: 0
+      width: calc(100% - 33px)
+      vertical-align: middle
+  .woof_childs_list_opener
+    display: inline-flex
+    vertical-align: middle
+    span      
+      width: 24px
+      height: 24px
+    .woof_is_closed, .woof_is_opened
+      background: url('../img/menu_arrow.svg')   
+      background-size: 14px auto !important 
+      background-position: center
+    .woof_is_closed
+      transform: rotate(180deg)  
+  .woof_container_product_cat 
+    .woof_checkbox_count
+      display: none     
+  .woof_list_checkbox   
+    .woof_checkbox_label  
+      position: relative
+    .woof_checkbox_count 
+      position: absolute
+      right: 0 
+      color: #A0A0A0
+.shop__left__close
+  display: none
+.button.woof_reset_search_form
+  width: 185px
+  border-radius: 10px 
+  margin: 0 auto
+  display: block
+
+@media screen and (max-width: 1199px)	     
+  .shop__left__filter
+    width: 100%
+    z-index: 1000
+    position: relative
+    height: calc(100% - 70px)
+    overflow-y: scroll
+    padding-right: 20px
+
+  .shop__left__background
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    position: fixed
+    z-index: 999
+    background: rgba(1,1,1, 0.8)  
+    display: none
+  .shop__left__close
+    display: block
+    padding: 15px 
+    padding-left: 33px
+    cursor: pointer
+    border-radius: 10px
+    margin-bottom: 20px  
+    z-index: 1000
+    position: relative
+    background: #fff
+    margin-right: 20px
+    &:after
+      content: ''
+      position: absolute
+      width: 14px
+      height: 14px
+      
+      background: url('../img/menu_arrow.svg')   
+      background-size: 14px auto
+      transform: rotate(90deg)
+      background-repeat: no-repeat
+      right: 15px
+      top: 18px
+
+@media screen and (max-width: 1199px)	 and (min-width: 576px)  
+  .shop__left__filter
+    @include scrollbars(10px, #fff, transparent, 10px)     
+@media screen and (max-width: 991px)	  
+  .shop__left__filter
+    height: calc(100vh - var(--header-height) - var(--header-bottom-height) - 70px)
+@media screen and (max-width: 575px)	  
+  .shop__left__filter
+    height: calc(100vh - var(--header-height) - var(--header-bottom-height) - 56px)    

@@ -1,0 +1,40 @@
+.about
+  padding-bottom: 90px
+  h2 
+    font-weight: 500
+    font-size: 25px
+    line-height: 100%
+    margin-bottom: 42px
+.about__text
+  width: 1320px
+  font-size: 16px
+  line-height: 20px
+  div 
+    margin-bottom: 20px
+  span 
+    font-weight: 500
+    font-size: 20px    
+    display: block
+.about__text__btn    
+  font-size: 14px
+  line-height: 20px
+  color: #797979
+  display: none
+  cursor: pointer
+
+@media screen and (max-width: 1439px)      
+  .about__text
+    width: 100%
+@media screen and (max-width: 767px)   
+  .about
+    padding-bottom: 63px     
+  .about__text
+    div 
+      display: none
+      &:first-child       
+        display: block 
+  .about__text__btn 
+    display: block   
+  .about__text.open
+    div 
+      display: block     

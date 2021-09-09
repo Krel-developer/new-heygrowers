@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="krelPopup.css" />
+  </head>
+  <body>
+    <a href="#bebra" class="scroll"> asdsadsa</a>
+    <section></section>
+    <section id="bebra"></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <a class="popup1" href="#test">krel</a> <br />
+    <a class="popup2" href="#test2">krel2</a> <br />
+    <a class="popup3" href="#test3">krel3</a> <br />
+
+    <div id="test" class="lol">
+      <div><h1>лол</h1></div>
+    </div>
+    <div id="test2" class="lol">
+      <div><h1>лол2</h1></div>
+    </div>
+    <div id="test3" class="lol">
+      <div><h1>лол3</h1></div>
+    </div>
+
+    <script src="krelPopup.js"></script>
+    <script src="krelScrollTo.js"></script>
+    <script>
+      krelPopup('.popup1')
+      krelPopup('.popup2', { anim: 'top' })
+      krelPopup('.popup3', { anim: '3d' })
+
+      krelScrollTo('.scroll')
+    </script>
+  </body>
+</html>

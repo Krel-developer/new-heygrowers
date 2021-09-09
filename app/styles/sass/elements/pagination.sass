@@ -1,0 +1,44 @@
+.woocommerce-pagination
+  font-size: 15px
+  line-height: 18px
+  li 
+    margin-right: 8px
+    &:last-child
+      margin-right: 0
+    .next
+      span
+        display: none
+  ul 
+    display: flex
+    flex-wrap: wrap
+
+    .page-numbers
+      padding: 8px 16px
+      border-radius: 5px
+      display: inline-block
+      cursor: pointer
+      transition: 0.3s
+
+      &:hover:not(.dots, .next ,.prev)
+        background: #B1CD00
+        color: #fff
+    .current
+      background: #B1CD00
+      color: #fff
+    svg 
+      display: inline-block
+      vertical-align: middle  
+      margin-top: -3px
+
+@media screen and (max-width: 575px)
+  .woocommerce-pagination
+    // font-size: 14px
+    // line-height: 16px
+    // li
+    //   margin-right: 4px
+    ul 
+      .page-numbers
+        padding: 4px 8px
+      .prev, .next
+        font-size: 0  
+    

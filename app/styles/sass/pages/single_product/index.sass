@@ -1,0 +1,111 @@
+.single-product
+  .single__product__cont
+    padding: 63px 86px 36px 59px
+    background: #FFFFFF
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
+    display: flex
+    flex-wrap: wrap  
+  .woocommerce-message  
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
+    .wc-forward  
+      display: none
+  .onsale
+    display: none    
+   
+
+.single__product__bottom
+  display: flex
+  width: 100%
+  border-top: 1px solid #F0F0F1
+  margin-top: 50px
+  h2 
+    font-weight: 500
+    font-size: 30px
+    line-height: 37px
+    margin-bottom: 30px
+
+    
+    
+
+.single-product
+  .woocommerce-product-gallery
+    width: 781px   
+  .summary
+    width: 663px
+    padding-left: 60px   
+
+.single__product__bottom
+  .related, .woocommerce-tabs 
+    padding-top: 34px
+  .woocommerce-tabs  
+    width: 781px
+    padding-right: 20px
+  .related
+    padding-left: 64px  
+    width: 736px
+
+@media screen and (max-width: 1720px)	  
+  .single-product
+    .single__product__cont
+      padding: 49px 67px 49px 46px
+    .woocommerce-product-gallery
+      width: 600px   
+    .summary
+      width: 576px
+      padding-left: 32px
+  .single__product__bottom
+    .related
+      padding-left: 32px    
+    
+
+@media screen and (max-width: 1439px)	  
+  .single-product
+    .single__product__cont
+      padding: 49px 20px 49px 30px
+    .woocommerce-product-gallery
+      width: 543px  
+    .summary
+      width: 516px
+
+
+@media screen and (max-width: 1199px)	
+  .single-product
+    .woocommerce-product-gallery
+      width: 440px 
+    .summary
+      width: 440px 
+  .single__product__bottom
+    flex-wrap: wrap
+    .woocommerce-tabs  
+      width: 100%
+    .related
+      width: 100%
+      padding-right: 0
+      padding-left: 0  
+@media screen and (max-width: 991px)	
+  .single-product
+    .woocommerce-product-gallery
+      width: 100%  
+      margin-bottom: 48px
+    .summary
+      width: 100%
+      padding-left: 0
+  .single__product__bottom
+    .related
+      width: 100%
+      
+@media screen and (max-width: 576px)
+  .single__product__cont
+    padding-left: 15px
+    padding-right: 15px
+    margin-right: -15px
+    margin-left: -15px
+  .single__product__bottom
+    h2 
+      font-size: 25px
+      line-height: 31px
+
+@import summary
+@import gallery
+@import description
+@import related

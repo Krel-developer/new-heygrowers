@@ -1,0 +1,73 @@
+.shop__left
+  .woof 
+    .widget_price_filter 
+      padding-bottom: 20px
+      .price_slider_wrapper 
+        margin-top: 6px
+        .ui-widget-content
+          background: #F2F2F2
+          border-radius: 2px
+          height: 4px
+          margin-left: 0
+          margin-bottom: 18px
+      .ui-slider 
+        .ui-slider-range    
+          background:   #afd80f
+        .ui-slider-handle
+          background: #FFFFFF
+          border: 2px solid #B1CD00
+          width: 17px
+          height: 17px
+          top: -6px
+          &:last-child
+            z-index: 100
+
+          
+      .price_slider_amount
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        input 
+          display: block !important  
+
+      .price_label, .clear
+        display: none !important
+      .min__max__text
+        display: flex
+        justify-content: space-between
+        font-size: 16px
+        line-height: 20px
+        margin-bottom: 24px    
+      .price_slider_amount__cont
+        border: 1px solid #E0E0E0
+        border-radius: 5px   
+        width: 105px
+        overflow: hidden
+        input
+          width: 100%
+          border: none
+          font-size: 16px
+          line-height: 20px
+          color: #A0A0A0
+          padding: 5px
+          padding-left: 45px
+      .price_slider_amount__line
+        width: 20px
+        height: 1px
+        background: #3C4045    
+      .price_slider_amount__min, .price_slider_amount__max
+        position: relative  
+        &::before
+          content: ''
+          position: absolute
+          top: 5px
+          left: 20px
+          font-size: 16px
+          line-height: 20px
+      .price_slider_amount__min
+        &:before
+          content: 'от'    
+      .price_slider_amount__max
+        &:before
+          content: 'до'     

@@ -1,0 +1,171 @@
+.cart_item
+  background: #fff
+  padding: 40px 70px 40px 35px
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 13px
+  .product-thumbnail  
+    a 
+      display: flex
+      width: 270px
+      height: 172px
+      justify-content: center
+      overflow: hidden
+    img
+      height: 100%  
+      width: auto
+  .amount
+    font-weight: bold
+    font-size: 20px
+    line-height: 24px   
+  .product-price
+    display: inline-block
+    vertical-align: middle
+    width: 160px
+    del
+      display: none
+    .save-percent
+      display: none
+    ins
+      text-decoration:  none    
+    .amount
+      &::after
+        content: 'руб./шт'    
+  .product-quantity
+    display: inline-block
+    vertical-align: middle      
+    .quantity-btn
+      box-shadow: none
+    .quantity
+      background: none  
+  .cart_item__info
+    padding-left: 45px
+    padding-top: 46px
+    flex: 1 auto
+  .product-name
+    margin-top: 13px
+    margin-bottom: 15px
+    width: 310px
+    a
+      font-size: 20px
+      line-height: 16px
+      color: #676A75
+  .categories
+    a 
+      font-size: 14px
+      line-height: 17px
+      color: #BDBDBD  
+  .product-subtotal
+    width: 180px  
+    margin-right: 15px
+    display: flex
+    align-items: center 
+    .amount
+      &::after
+        content: 'руб.' 
+    .btn, .button
+      padding: 14px 22px
+      border-radius: 10px     
+      margin-bottom: 0 !important
+
+  .product-remove
+    display: flex
+    align-items: center  
+  .remove
+    font-size: 0
+    line-height: 0
+    width: 20px
+    height: 20px
+    display: block
+    background: url('../img/close_btn.svg')
+.yith-wcwl-form .add_to_cart 
+  border-radius: 5px
+      
+
+@media screen and (max-width: 1720px)    
+  .cart_item
+    padding: 40px 35px 40px 35px
+    .product-thumbnail  
+      a 
+        width: 208px
+    .cart_item__info
+      padding-left: 35px    
+    .product-subtotal  
+      justify-content: center
+
+@media screen and (max-width: 1439px)    
+  .cart_item
+    padding: 20px
+    .product-subtotal
+      width: 120px 
+    .cart_item__info
+      padding-left: 15px  
+      padding-top: 10px
+  .wishlist-fragment  
+    .cart_item
+      .product-subtotal
+        width: 180px     
+
+@media screen and (max-width: 991px)    
+  .cart_item
+    .product-thumbnail  
+      a 
+        width: 172px     
+  .wishlist-fragment  
+    .cart_item
+      .product-subtotal
+        width: 120px
+        .btn, .button
+          font-size: 13px       
+  .yith-wcwl-form .add_to_cart 
+    font-size: 15px
+    line-height: 18px         
+
+@media screen and (max-width: 767px)       
+  .cart_item
+    padding: 28px 17px 87px 23px
+    position: relative
+    .product-thumbnail  
+      a 
+        width: 84px 
+        height: 62px    
+
+    .cart_item__info
+      padding-left: 18px
+      padding-top: 0
+      width: 154px
+    .product-name   
+      width: 100%
+      a 
+        font-size: 12px
+        line-height: 16px
+    .categories
+      a  
+        font-size: 12px
+        line-height: 15px
+    .amount
+      font-size: 16px
+      line-height: 20px    
+    .product-quantity
+      position: absolute
+      left: 23px
+      bottom: 28px
+      .quantity 
+        width: 111px
+        background: #f8f8f8
+        input
+          font-size: 16px
+          line-height: 20px
+        .quantity-btn
+          height: 30px
+          width: 30px
+    .product-subtotal
+      position: absolute
+      width: max-content
+      right: 17px
+      bottom: 35px    
+  .wishlist-fragment  
+    .cart_item
+      .product-subtotal
+        right: -3px
+        bottom: 17px

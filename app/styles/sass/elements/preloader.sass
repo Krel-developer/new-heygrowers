@@ -1,0 +1,28 @@
+//прелоадер
+.preloader
+  right: 0
+  bottom: 0
+  top: 0
+  left: 0
+  background: #fff
+  display: flex
+  position: fixed
+  z-index: 10000000000000000000000000000000
+  img
+    width: 40px
+    display: block
+    margin: auto
+    transform-origin: 20px 71px
+    animation: hello 2s ease-in-out infinite
+.loaded_hiding .preloader
+  transition: 0.3s opacity
+  opacity: 0
+.loaded .preloader
+  display: none
+@keyframes hello
+  from
+    transform: rotate(-45deg)
+  50%
+    transform: rotate(45deg)
+  to
+    transform: rotate(-45deg)  

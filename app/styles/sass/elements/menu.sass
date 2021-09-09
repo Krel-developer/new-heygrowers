@@ -1,0 +1,241 @@
+.catalog__list
+  z-index: 1100
+  font-weight: 300
+  background: #fff
+  font-size: 25px
+  line-height: 31px
+  padding-top: 66px
+  position: fixed
+  top: var(--header-height)
+  left: 0
+  width: 100vw
+  height: calc(100vh - var(--header-height) - 80px)
+  opacity: 0
+  transition: opacity 0.3s
+  
+  ul 
+    overflow-y: auto
+    @include scrollbars(10px, #3C4045, #E0E0E0, 10px) 
+    height: 100%
+  li
+    margin-bottom: 15px
+  .container 
+    display: flex
+    justify-content: space-between
+    height: 100%
+  a 
+    display: block
+    width: 100%  
+    transition:  0.2s 
+    &:hover 
+      color: #afd80f 
+
+.catalog__list__left
+  width: 470px
+  height: 100%
+  position: relative
+  padding-bottom: 26px
+  &:after
+    content: ''
+    width: 1px
+    background: #828282
+    height: calc(100% - 44px)
+    position: absolute
+    top: 0
+    right: -25px
+
+
+
+.catalog__list__childrens
+  position: absolute
+  top: 0
+  height: 100%
+
+  left: 555px
+  padding-right: 38px
+  z-index: 100
+  transition: opacity 0.3s
+  opacity: 0
+  z-index: 0
+  width: 400px
+  li 
+    font-size: 20px
+    line-height: 22px
+    margin-bottom: 15px
+
+.catalog__list__childrens__active
+  .catalog__list__childrens
+    opacity: 1
+    z-index: 1000    
+.catalog__list__link__cont
+  position: relative
+  padding-right: 50px
+  a
+    width: max-content
+  .sub__btn
+    content: ''
+    background: url('../img/menu_arrow.svg')  
+    width: 14px
+    height: 7px
+    display: block
+    height: 100%
+    width: 50px
+    position: absolute
+    background-size: 14px 7px
+    cursor: pointer
+    background-position: center
+    transition: transform 0.3s
+    top: 0
+    right: 0
+    background-repeat: no-repeat
+
+.catalog__list__link__cont.open
+  a 
+    color: #afd80f  
+  .sub__btn
+    transform: rotate(180deg) 
+.catalog__list__childrens__sub
+  ul
+    padding-left: 65px 
+    padding-top: 20px
+    overflow-y: visible !important
+    a 
+      color: #3C4045 !important
+      &:hover 
+        color: #afd80f !important
+  li
+    font-size: 16px
+    line-height: 19px     
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+
+.catalog__list__childrens__sub
+  overflow: hidden
+  transition: height 0.3s     
+  height: 0
+
+
+.categ__active
+  color: #afd80f  
+  &:hover
+    color: #afd80f  
+.catalog__list__background
+  opacity: 0   
+  transition: opacity 0.5s 
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  position: fixed
+  z-index: -1
+  background: rgba(1,1,1, 0.8)
+  
+.catalog__list__background.active
+  z-index: 500
+  opacity: 1
+.catalog__list__right
+  width: 613px  
+  @include scrollbars(10px, #3C4045, #E0E0E0, 10px) 
+  overflow-y: auto  
+  padding-right: 20px
+  margin-right: -20px
+
+@media screen and (max-width: 1720px)
+
+  .catalog__list
+    padding-top: 20px
+    font-size: 20px
+    line-height: 20px
+    height: calc(100vh - var(--header-height) - 30px)
+  .catalog__list__left
+    width: 290px
+  .catalog__list__childrens
+    left: 350px
+  .catalog__list__right
+    width: 474px  
+
+@media screen and (max-width: 1439px)
+  .catalog__list
+    font-size: 18px
+    line-height: 20px
+    li 
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+  .catalog__list__left
+    width: 245px
+  .catalog__list__childrens
+    left: 305px
+    width: 320px
+    li 
+      font-size: 17px
+      line-height: 20px
+  .catalog__list__childrens__sub 
+    ul
+      padding-left: 20px    
+      padding-top: 10px
+
+
+@media screen and (max-width: 1199px)
+  .catalog__list__right
+    width: 311px
+
+@media screen and (max-width: 991px)
+  .catalog__list
+    height: calc(100vh - var(--header-height) - var(--header-bottom-height))
+  .catalog__list__right
+    display: none
+
+@media screen and (max-width: 767px)
+  .catalog__list
+    top: var(--header-height)
+    left: 0
+    bottom: 0
+    right: 0
+    
+    position: fixed
+    height: auto
+    padding-top: 0
+    overflow-y: scroll
+    flex-wrap: wrap
+    .container 
+      height: auto
+      padding-top: 20px
+      padding-bottom: calc(var(--header-bottom-height) + 20px)
+    ul 
+      overflow-y: visible
+  .catalog__list__left
+    width: 100%
+    overflow-y:  visible
+    &:after
+      display: none
+  .catalog__list__childrens
+    position: static
+    width: 100%  
+  .catalog__list__childrens
+    opacity: 1
+    padding-right: 0
+    padding-left: 20px
+    padding-top: 10px
+  .catalog__list__childrens__cont
+    height: 0
+    transition: height 0.3s  
+    overflow: hidden
+  .catalog__list
+    .container
+      flex-wrap: wrap 
+  .catalog__list__right
+    display: block  
+    padding-right: 0
+    margin-right: 0
+    width: 100%
+    margin-bottom: 30px
+  .catalog__list__background
+    display: none  
+@media screen and (max-width: 575px)    
+  .catalog__list__right
+    width: 100%
+    max-width: 465px
+    margin: 0 auto
+

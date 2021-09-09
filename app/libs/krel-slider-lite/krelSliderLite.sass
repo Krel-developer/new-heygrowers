@@ -1,0 +1,45 @@
+.krel-lite-track 
+  width: max-content
+  display: flex
+.krel-lite-dragg
+  a
+    pointer-events: none
+.krel-lite-draggable 
+  cursor: pointer
+  position: relative
+  &:before 
+    content: ''
+    position: absolute
+    height: 100%
+    width: 100%
+    left: -100%
+    background: #FBFBFB
+    z-index: 300
+.krel-lite-slider
+  position: relative
+
+.krel-lite-draggable-container
+  &:after 
+    content: ''
+    position: absolute
+    top: 0
+    height: 100%
+    width: 100%
+    right: -100%
+    background: #FBFBFB
+    z-index: 300
+   
+
+
+.krel-lite-mobile 
+  .krel-lite-draggable 
+    overflow-x: scroll
+  .krel-lite-track 
+    display: flex
+    width: max-content
+    padding-bottom: 30px
+  .krel-arrows 
+    display: none
+  .krel-lite-draggable-container
+    &:after  
+      display: none

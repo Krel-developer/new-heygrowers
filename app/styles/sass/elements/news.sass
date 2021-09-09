@@ -1,0 +1,85 @@
+.news__list
+  margin-right: -24px
+  margin-left: -24px
+.news__list__item
+  display: inline-block
+  vertical-align: top
+  width: calc(33% - 48px)
+  margin: 0px 24px 
+  margin-bottom: 25px
+  background: #fff
+  border-radius: 3px
+  padding-bottom: 56px
+.news__list__item__img
+  height: 210px
+  background-size: cover !important
+  background-position: center top !important
+
+.news__list__item__info
+  padding: 15px 30px 21px
+  border-bottom: 1px solid rgb(42, 42, 42, 0.1)
+.news__list__item__title
+  font-weight: bold
+  font-size: 18px
+  line-height: 27px
+  margin-bottom: 17px   
+  min-height: 54px  
+.news__list__item__excerpt
+  font-size: 15px
+  line-height: 22px
+  margin-bottom: 12px
+  height: 124px
+.news__list__item__info__bottom
+  display: flex 
+  justify-content: space-between  
+  font-size: 13px
+  line-height: 165%
+.news__list__item__date
+  opacity: 0.7  
+
+
+.news__content
+  font-size: 16px
+  line-height: 20px
+  color: #676A75
+  h1, h2, h3, h4 
+    margin-bottom: 20px
+    font-weight: 500
+  ul
+    padding-bottom: 20px
+    padding-left: 25px
+    list-style-type: circle
+    li
+      line-height: 140%
+      margin-bottom: 15px
+  p
+    margin-bottom: 20px
+  table 
+    width: 100% !important
+    td 
+      padding: 10px
+      border: 1px solid #676a75	
+  figure
+    max-width: 100% !important
+  img
+    display: block
+    max-width: 100% !important
+    height: auto !important
+    margin: 0 auto   
+
+@media screen and (max-width: 1720px)	 
+  .news__list__item__title
+    min-height: 81px 
+@media screen and (max-width: 1199px)	 
+  .news__list__item
+    width: calc(49% - 48px)   
+@media screen and (max-width: 767px)	 
+  .news__list
+    margin-right: 0
+    margin-left: 0    
+  .news__list__item
+    width: 100%
+    margin: 0
+    margin-bottom: 15px
+  .news__list__item__title
+    min-height: max-content  

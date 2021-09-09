@@ -1,0 +1,48 @@
+.novinki__cont
+  display: flex
+
+.novinki__left
+  width: calc(100% - 402px)
+@media screen and (max-width: 1720px)  
+  .novinki__left
+    width: calc(100% - 265px)
+    .custom__product 
+      &:nth-child(6), &:nth-child(5)
+        display: none 
+
+
+@media screen and (max-width: 1439px)  
+  .novinki__left
+    width: calc(100% - 200px)
+@media screen and (max-width: 1199px)  
+  .novinki__left
+    width: calc(100% - 165px)   
+    
+@media screen and (max-width: 991px)     
+  .custom__product 
+    &:nth-child(6), &:nth-child(5), &:nth-child(8), &:nth-child(7)
+      display: block
+  .novinki__left
+    width: 100%
+    margin-bottom: 40px
+    .custom__product 
+      &:nth-child(6), &:nth-child(5), &:nth-child(8), &:nth-child(7)
+        display: block
+  .novinki__cont
+    flex-wrap: wrap    
+
+@media screen and (max-width: 767px)    
+  .novinki__left    
+    overflow-x: scroll
+    .products 
+      width: max-content
+
+@media screen and (max-width: 575px)  
+  .novinki__cont
+    margin-right: -15px
+
+  .novinki__left.custom__products  
+    .products 
+      
+      .product    
+        width: 174px

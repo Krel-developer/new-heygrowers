@@ -1,0 +1,50 @@
+.email_form
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25)
+  background: #fff
+  border-radius: 5px
+  overflow: hidden
+  margin-top: 30px
+  margin-bottom: 10px
+  width: max-content
+  position: relative
+  .wpcf7-form-control-wrap
+    margin-top: 0
+  
+  .email_form__cont
+    display: inline-flex
+    width: max-content
+  input
+    width: 184px
+    border: none
+    padding: 15px 10px
+    font-size: 16px
+    line-height: 20px
+  .btn
+    width: 144px  
+    border-radius: 0
+  .wpcf7-not-valid-tip, .wpcf7-response-output
+    display: none !important  
+
+.email_form__message
+  height: 100%
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0    
+  opacity: 0
+  transition: 0.4s
+  z-index: -1
+  color: #3C4045
+  display: flex
+  justify-content: center
+  align-items: center
+
+.email_form.sent
+  .email_form__cont
+    opacity: 0 
+  .email_form__message
+    opacity: 1  
+    z-index: 2
+
+.email_form.invalid, .email_form.failed    
+  box-shadow: 0 0 4px 1px rgb(255, 83, 92)

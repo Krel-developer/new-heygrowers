@@ -1,0 +1,171 @@
+.product-category__cont
+  justify-content: space-between
+  margin-bottom: 44px
+
+
+.term-description__cont
+  height: 64px 
+  width: 737px
+  transition: 0.4s
+  font-weight: 300
+  font-size: 14px
+  line-height: 16px 
+  overflow: hidden
+  p , h2, h3, h4, span 
+    font-family: Formular !important
+  p , h2, h3, h4
+    margin-bottom: 15px
+  h2, h3, h4
+    font-weight: 500 !important
+    text-align: left   !important
+  p, span 
+    font-weight: 300 !important
+    font-size: 14px !important
+    line-height: 16px  !important 
+    text-align: left   !important
+.term-description__btn
+  font-size: 14px
+  line-height: 20px
+  color: #797979
+  cursor: pointer
+  margin-top: 10px
+  margin-bottom: 50px
+.shop__right
+  .page-title
+    font-weight: 500
+    font-size: 30px
+    line-height: 37px  
+    margin-bottom: 25px
+  .product-category__cont
+    .products
+      margin: 0  
+      justify-content: space-between
+
+.woocommerce-ordering
+  display: none
+.orderby__btns
+  display: flex
+  width: 100%
+  margin-bottom: 28px
+  align-items: flex-end
+
+.orderby__btn
+  font-size: 15px
+  
+  line-height: 18px
+  color: #676A75  
+  margin-right: 40px  
+  cursor: pointer
+.orderby__text
+  color: #A0A0A0  
+  cursor: auto
+.orderby__btn.active
+  color: #B1CD00  
+
+#woof_results_by_ajax, .woof_shortcode_output
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  .products 
+    width: 100%
+  .woocommerce-result-count, .woocommerce-pagination
+    margin-top: 35px
+.post-type-archive    
+  .product-category__cont
+    margin-bottom: 0
+.woocommerce-result-count
+  order: 3
+.woocommerce-pagination
+  order: 4      
+
+.lmp_button
+  display: none !important
+.shop__left__more
+  width: 100%
+  padding: 17px 0
+  border-radius: 10px
+  margin-top: 35px
+  background: #f5f5f5   
+  text-align: center
+  cursor: pointer
+
+.woof_products_top_panel
+  display: none !important  
+
+.btn__filter__open
+  display: none  
+
+@media screen and (max-width: 1199px)	   
+  .woocommerce-ordering
+    display: block
+    width: 100%
+    position: relative
+    cursor: pointer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      width: 8px 
+      height: 17px
+      background: url('../img/order_icon.svg')
+      top: 2px
+    select 
+      border: none 
+      background: none
+      appearance: none
+      font-size: 14px
+      line-height: 18px
+      padding-left: 14px
+  .orderby__btns
+    display: none
+  .btn__filter__open
+    display: block  
+    font-size: 14px
+    line-height: 18px
+    padding-left: 24px  
+    position: relative
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      width: 16px 
+      height: 17px
+      background: url('../img/filter_icon.svg')
+      background: cover
+      background-repeat: no-repeat
+      top: 2px
+      left: 0
+@media screen and (max-width: 991px)	   
+  .term-description__cont
+    width: 100%
+@media screen and (max-width: 767px)	
+  .tax-product_cat 
+    .product-category__cont
+      overflow-x: scroll
+      .lmp_load_more_button 
+        display: none !important
+      .product-category__void
+        display: none 
+      .products
+        width: max-content   
+@media screen and (max-width: 575px)	
+  .tax-product_cat 
+    .product-category__cont
+      overflow-x: scroll
+      margin-right: -15px
+  #woof_results_by_ajax, .woof_shortcode_output
+    .woocommerce-result-count, .woocommerce-pagination
+       
+      margin: 0 auto 
+      margin-top: 35px  
+    .woocommerce-result-count
+      width: 100%
+      text-align: center   
+    .woocommerce-pagination
+      justify-content: center  

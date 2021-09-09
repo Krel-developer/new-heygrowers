@@ -1,0 +1,162 @@
+footer
+  padding-top: 22px
+  padding-bottom: 15px
+  background: #EDF0F6
+  .container
+    display: flex
+    justify-content: space-between
+    .footer__block
+      &:nth-child(1)
+        width: 263px
+      &:nth-child(2)
+        width: 400px
+      &:nth-child(3)
+        width: 330px
+      &:nth-child(4)
+        width: 358px      
+.footer__bottom
+  font-size: 15px
+  line-height: 18px  
+  padding-top: 60px
+  .container
+    .footer__block
+      &:nth-child(4)
+        text-align: right
+        padding-right: 22px 
+.footer__title
+  font-size: 24px
+  line-height: 29px
+.footer__logo__text
+  padding-top: 32px
+  font-size: 15px
+  line-height: 18px  
+  margin-top: 20px
+
+.footer__menu  
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  div 
+    width: 148px
+  a 
+    display: block
+    font-size: 16px
+    line-height: 35px
+.footer__line 
+  height: 1px
+  background:  #323F4C   
+  margin: 20px 0
+  opacity: 0.2
+.footer__contacts
+  color: #CBCBCB
+  font-size: 16px
+  line-height: 20px
+  a 
+    color: #CBCBCB  
+  .footer__btn
+    margin-top: 10px
+    padding: 17px 0
+    border: 1px solid #AFD80F
+    border-radius: 5px    
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    text-align: center
+    color: #AFD80F
+    cursor: pointer
+    width: 170px
+    display: block
+.footer__social
+  display: flex    
+  margin-top: 22px
+  a 
+    margin-right: 5px
+
+.form__text
+  font-size: 15px
+  line-height: 18px
+  color: #CBCBCB
+  a
+    color: #CBCBCB
+    text-decoration: underline
+.footer__card
+  img 
+    width: 134px
+@import ../elements/email_form
+
+@media screen and (max-width: 1720px)   
+  footer
+    .container
+      .footer__block
+        &:nth-child(4)
+          display: none
+  .footer__card
+    text-align: right          
+@media screen and (max-width: 1199px)    
+  .footer__logo__text
+    padding-top: 0
+    margin-top: 19px
+  .footer__card
+    text-align: left      
+  .footer__top
+    .container
+      flex-wrap: wrap
+      .footer__block
+        &:nth-child(3),  &:nth-child(2)
+          order: 2
+          margin-top: 20px
+
+  footer
+    .container
+      .footer__block
+        width: calc(50% - 24px) !important
+        &:nth-child(4)
+          display: block  
+  .footer__bottom
+    .footer__block
+      &:nth-child(4)
+        display: none  !important       
+@media screen and (max-width: 991px)  
+  footer
+    margin-bottom: var(--header-bottom-height)
+
+@media screen and (max-width: 767px)  
+  footer
+    padding-top: 40px
+    padding-bottom: 38px
+    .container
+      flex-wrap: wrap
+      .footer__block
+        width: 100% !important
+  .footer__logo__text
+    width: 285px
+    padding-top: 0 
+    margin-top: 20px      
+  .footer__title
+    margin-top: 40px  
+
+  .footer__form
+    .footer__title
+      font-size: 20px
+      line-height: 100%
+  .footer__card
+    order: -1
+    margin-bottom: 40px    
+    img
+      width: 188px
+  .footer__top
+    .container
+      .footer__block
+        &:nth-child(4)
+          order: 3
+  .footer__bottom
+    .footer__block
+      &:nth-child(1)
+        order: 2
+        margin-top: 20px
+        
+
+    
+
+
+      

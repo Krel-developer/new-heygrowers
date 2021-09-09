@@ -1,0 +1,166 @@
+// USER VARIABLES SECTION
+
+$accent: orange // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.65 // Document Line Height
+
+
+// Mixins
+
+@import mixins/_scrollbar
+
+// FONTS LOAD SECTION
+
+	
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff')
+
+@include font('Formular', normal, 400, '../fonts/formular/Formular.woff')
+@include font('Formular', normal, 500, '../fonts/formular/Formular-Medium.woff')
+@include font('HelveticaNeueCyr', normal, 700, '../fonts/helvetica/HelveticaNeueCyr-Bold.woff')	
+
+//libs 
+@import ../../libs/krel-slider-lite/krelSliderLite.sass
+@import ../../libs/krel-popup/krelPopup.sass
+
+
+
+
+// GENERAL DOCUMENT STYLES
+*,
+*::before,
+*::after 
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+	outline: none !important
+
+.container
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+
+
+ul
+	list-style: none	
+// контэйнеры
+@media (min-width: 576px)
+	.container
+		max-width: 540px	
+		padding-right: 15px
+		padding-left: 15px
+@media (min-width: 768px)
+	.container
+		max-width: 736px
+
+@media (min-width: 992px)
+	.container
+		max-width: 960px
+@media (min-width: 1200px)
+	.container
+		max-width: 1140px
+@media (min-width: 1440px)
+	.container
+		max-width: 1320px				
+@media (min-width: 1720px)
+	.container
+		max-width: 1704px		
+	
+
+
+
+body 
+	font-family: Formular
+	color: #3C4045
+	background: #FBFBFB
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	-webkit-text-size-adjust: 100%
+	-webkit-tap-highlight-color: transparent
+
+	
+a 
+	color: #3C4045
+	text-decoration: none
+	&:hover 
+		color: #3C4045
+		text-decoration: none	
+
+section
+	padding: 50px 0
+#primary 
+	padding-bottom: 50px
+.btn_anim_add
+	width: 40px
+	height: 40px
+	display: block
+	background: url('../img/add_to_cart_icon.svg')
+	background-size: cover
+	background-repeat: no-repeat !important
+	font-size: 0
+	position: fixed
+	z-index: 100000000000
+
+#yith-wcwl-popup-message
+	margin-right: 0 !important
+	margin-left: 0 !important
+	margin-top: 0 !important
+	margin-bottom: 0 !important
+	transform: translateX(-50%) translateY(-50%)
+	font-weight: 500
+	border-radius: 10px
+	line-height: 25px
+.woof_search_is_going nav.woocommerce-breadcrumb
+	display: block !important
+.jQuery-plainOverlay-progress
+	border-color:  #afd80f	!important
+
+.wc-backward
+	margin-top: 30px
+	border-radius: 10px !important 	
+
+
+
+
+
+@media screen and (max-width: 991px)    
+	.btn_anim_add
+		width: 30px
+		height: 30px
+		background-size: cover
+
+.woocommerce-Price-currencySymbol
+	display: none !important
+
+@media screen and (max-width: 1439px)  
+	section
+		padding: 30px 0
+
+@media screen and (max-width: 767px)  
+	#primary 
+		padding-bottom: 25px
+	section
+		padding: 25px 0
+
+@media screen and (max-width: 575px)  
+	.hits
+		.custom__products 
+			.products 
+				margin-right: -15px
+				.product
+					width: 174px
+
+// @media screen and (max-width: 1720px)	
+// @media screen and (max-width: 1439px)		
+// @media screen and (max-width: 1199px)
+// @media screen and (max-width: 991px)
+// @media screen and (max-width: 767px)
+// @media screen and (max-width: 575px)				

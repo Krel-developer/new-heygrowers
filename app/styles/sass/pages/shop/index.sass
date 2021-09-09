@@ -1,0 +1,68 @@
+.shop__left
+  width: 349px
+  margin-right: 70px
+  display: inline-block
+  vertical-align: top
+  position: sticky
+  padding-right: 20px
+  top:  calc(var(--header-height) + 30px)
+  max-height: calc(100vh -  var(--header-height) - 112px)
+  overflow-y: auto
+  @include scrollbars(10px, #3C4045, #E0E0E0, 10px) 
+  transition: 0.4s
+
+.shop__right
+  width: 1244px
+  display: inline-block
+  vertical-align: top
+
+.yith-infs-loader
+  margin: 0 auto
+  margin-top: 20px
+  margin-bottom: 30px
+  
+@media screen and (max-width: 1720px)	
+  .shop__left
+    width: 329px
+    margin-right: 30px
+  .shop__right
+    width: 925px
+@media screen and (max-width: 1439px)	   
+  .shop__left
+    width: 290px
+  .shop__right
+    width: 784px
+@media screen and (max-width: 1199px)	   
+  .shop__right
+    width: 100% 
+  
+  .shop__left
+    position: fixed
+    width: 350px
+    right: 0  
+    top: calc(var(--header-height) + 30px)
+    bottom: 0
+    z-index: 999
+    padding-right: 10px
+    transition: 0.6s
+    transform: translateX(100%  )
+    margin-right: 0
+    max-height: max-content
+  .filter--open 
+    overflow: hidden
+    .shop__left__background
+      display: block
+    .shop__left
+      transform: translateX(0 )
+      
+@media screen and (max-width: 575px)	
+  .shop__left
+    width: 100%
+    background: #fbfbfb
+    padding: 24px 
+    top: calc(var(--header-height))
+  
+
+@import price_range
+@import filter
+@import products

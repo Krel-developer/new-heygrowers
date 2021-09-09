@@ -1,0 +1,67 @@
+<div class="quantity">
+  <div
+    class="quantity-btn"
+    data-dir="minus"
+    onclick="quantityFunction.click(this)"
+  >
+    <span>-</span>
+  </div>
+  <input
+    type="number"
+    id="quantity_6103f0ca7cc86"
+    class="input-text qty text"
+    step="1"
+    min="0"
+    max="56"
+    name="cart[c902b497eb972281fb5b4e206db38ee6][qty]"
+    value="4"
+    title="Кол-во"
+    size="4"
+    placeholder=""
+    inputmode="numeric"
+    oninput="quantityFunction.input(this)"
+  />
+  <div
+    class="quantity-btn"
+    data-dir="plus"
+    onclick="quantityFunction.click(this)"
+  >
+    <span>+</span>
+  </div>
+</div>
+
+<!-- <script>
+  const quantitys = document.querySelectorAll('.quantity')
+  quantitys.forEach((quantity) => {
+    quantity.addEventListener('click', (e) => {
+      if (e.target.closest('.quantity-btn')) {
+        const btn = e.target.closest('.quantity-btn')
+        const input = btn.parentNode.children[1]
+        const inputValue = +input.value
+        if (btn.dataset.dir === 'minus' && inputValue !== 1) {
+          if (input.value === input.getAttribute('max')) {
+            btn.parentNode.children[2].style.display = null
+          }
+          input.value = inputValue - 1
+        } else if (btn.dataset.dir === 'plus') {
+          input.value = inputValue + 1
+          if (input.value >= input.getAttribute('max')) {
+            btn.style.display = 'none'
+          }
+        }
+      }
+      quantity.children[1].addEventListener('input', (e) => {
+        const checkingRegExp = new RegExp(/^(\d){1,7}$/g)
+        const result = e.target.value.match(checkingRegExp) !== null
+
+        if (!result) {
+          e.target.value = e.target.value.slice(0, -1)
+        }
+        if (+e.target.value > +e.target.getAttribute('max')) {
+          e.target.value = +e.target.getAttribute('max')
+          e.target.parentNode.children[2].style.display = 'none'
+        }
+      })
+    })
+  })
+</script> -->

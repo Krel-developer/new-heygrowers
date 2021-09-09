@@ -1,0 +1,75 @@
+.info__item__dostavka
+  .info__item__left
+    width: 695px
+    padding-right: 10px
+.info__item__oplata, .info__item__zakaz
+  .info__item__left
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    strong
+      font-weight: 400
+
+.info__item__oplata__card
+  display: flex
+  align-items: center
+  div
+    font-size: 20px
+    line-height: 27px
+    &:first-child
+      width: 140px
+      height: 80px
+      display: flex
+      align-items: center
+      margin-right: 20px
+      border: 1px solid #e0e0e0
+      border-radius: 10px
+      padding: 0 20px
+      img 
+        width: 100%    
+@media screen and (max-width: 1720px)	     
+  .info__item__dostavka
+    .info__item__right
+      width: 390px
+      overflow: hidden
+      border-radius: 20px
+      img 
+        width: 538px
+        object-position: -111px 50%
+  .info__item__dostavka.info__item__oplata
+    .info__item__right
+      img 
+        object-position: -88px 50%      
+@media screen and (max-width: 1439px)	   
+  .info__item__dostavka
+    .info__item__right
+      img 
+        object-position: -130px 50%  
+  .info__item__dostavka.info__item__oplata
+    .info__item__right
+      img 
+        object-position: -111px 50%          
+  
+@media screen and (max-width: 991px)	    
+  .info__item__dostavka
+    .info__item__left
+      width: 100%
+    .info__item__right
+      display: none
+  .info__item__oplata, .info__item__zakaz
+    .info__item__left > div
+      margin-bottom: 20px    
+
+
+
+@media screen and (max-width: 575px)
+  .info__item__oplata__card
+    div
+      font-size: 16px
+      line-height: 20px
+      &:first-child
+        width: 105px
+        height: 60px
+        margin-right: 15px
+        border-radius: 10px
+        padding: 0 15px
