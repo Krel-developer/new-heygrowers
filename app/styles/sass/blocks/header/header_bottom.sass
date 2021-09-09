@@ -33,18 +33,20 @@
   flex-grow: 1
   margin: 0 20px
 .header__search__field
-  width: calc(100% - 100px)
-  display: inline-block
+  width: 100%
+  display: inline-flex
   vertical-align: middle
   background: #FFFFFF
   border: 1px solid #EEEDED
   border-radius: 50px 
-  padding: 0 27px 
   .dgwt-wcas-search-wrapp
     min-width: 1px
-    max-width: 100%
+    max-width: calc(100% - 121px)
+    padding-left: 27px
     .dgwt-wcas-ico-magnifier
       display: none
+  .dgwt-wcas-search-form
+    padding-right: 10px    
   input
     padding: 15px 0 !important
     border: none !important

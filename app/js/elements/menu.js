@@ -96,7 +96,7 @@ export class krelMenu {
   }
   close() {
     this.menu.style.opacity = null
-    document.body.style.overflow = null
+    document.body.classList.remove('menu--open')
     this.background.classList.remove('active')
     document.body.classList.remove('header__mini')
     setTimeout(() => {
@@ -106,7 +106,7 @@ export class krelMenu {
   }
   open() {
     this.menu.style.display = null
-    document.body.style.overflow = 'hidden'
+    document.body.classList.add('menu--open')
     document.body.classList.add('header__mini')
     setTimeout(() => {
       this.menu.style.opacity = '1'
