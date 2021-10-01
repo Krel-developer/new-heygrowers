@@ -64,7 +64,7 @@ function createBtn(text, id) {
 function createDesc(text) {
   const desc = document.createElement('div')
   desc.classList.add('shipping__desc__item')
-  desc.textContent = text
+  desc.innerHTML = text
   return desc
 }
 

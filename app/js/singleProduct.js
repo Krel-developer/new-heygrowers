@@ -64,9 +64,70 @@ function createArticul() {
       .insertAdjacentHTML('afterbegin', artHhtml)
   }
 }
+function initThumbArrow() {
+  setTimeout(() => {
+    const thums = document.querySelector('.flex-control-nav')
+    if (thums) {
+      console.log(thums)
+      const cont = document.createElement('div')
+      const contNav = document.createElement('div')
+
+      contNav.classList.add('flex-control-nav__cont')
+      cont.classList.add('flex-control-nav')
+      thums.classList.remove('flex-control-nav')
+      thums.before(cont)
+      cont.append(contNav)
+      contNav.append(thums)
+      const prev = document.createElement('div')
+      const next = document.createElement('div')
+      prev.classList.add('flex-control-nav__prev')
+      prev.style.display = 'none'
+      next.classList.add('flex-control-nav__next')
+      cont.prepend(prev)
+      cont.append(next)
+      thums.dataset.translate = 0
+      next.onclick = () => {
+        moveThumb()
+      }
+      prev.onclick = () => {
+        moveThumb('prev')
+      }
+
+      const maxTranslate =
+        +contNav.offsetHeight * (Math.ceil(thums.children.length / 3) - 1)
+      console.log('maxTranslate', maxTranslate)
+      function moveThumb(dir = 'next') {
+        let newTranslate
+        const translate = +thums.dataset.translate
+        if (dir === 'next') {
+          newTranslate = translate + contNav.offsetHeight
+        } else {
+          newTranslate = translate - contNav.offsetHeight
+        }
+        console.log(translate, newTranslate)
+        thums.dataset.translate = newTranslate
+        if (newTranslate === 0) {
+          prev.style.display = 'none'
+        }
+        if (translate === 0) {
+          prev.style.display = null
+        }
+        if (newTranslate === maxTranslate) {
+          next.style.display = 'none'
+        }
+        if (translate === maxTranslate) {
+          next.style.display = null
+        }
+        thums.style.transform = `translateY(-${newTranslate}px)`
+      }
+    }
+  }, 0)
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initBtnAddToCartAnim()
   initRadioButtonForSelected()
+  initThumbArrow()
   const width = window.screen.availWidth
 
   const related = document.querySelector('.related')

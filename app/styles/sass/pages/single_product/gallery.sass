@@ -16,23 +16,31 @@
     top: 0
     left: 0
     height: 100%
-    overflow-y: hidden
+    
     width: 202px
     padding-right: 20px
     list-style: none
+    ol 
+      list-style: none
     li 
       width: 100%
       border: 1px solid #B1CD00
       box-sizing: border-box
       border-radius: 10px
       text-align: center
-      margin-bottom: 20px
+      margin-bottom: 11px
       height: calc(33% - 13px)
       overflow: hidden
+      &:nth-child(3n+3)
+        margin-bottom: 0
       img 
         height: 100%
         padding: 10px  0
-
+  .flex-control-nav__cont 
+    overflow-y: hidden
+    height: 100%
+    ol 
+      transition: 0.4s
   .woocommerce-product-gallery__image
     height: 400px   
     overflow: hidden
@@ -45,6 +53,39 @@
         height: 100%    !important
         width: auto !important   
         object-position: 50%
+
+.flex-control-nav__prev, .flex-control-nav__next
+  width: calc(100% - 20px)
+  border: 1px solid #B1CD00
+  box-sizing: border-box
+  border-radius: 10px
+  position: absolute
+  left: 0
+  cursor: pointer
+  padding: 5px 0
+  text-align: center
+  height: max-content
+  transition: 0.4s
+  opacity: 0
+  &:before 
+    content: ''
+    border-left: 4px solid transparent
+    border-right: 4px solid transparent
+    display: inline-block
+
+.flex-control-nav__prev
+  top: -40px
+  &:before
+    border-bottom: 8px solid #B1CD00
+.flex-control-nav__next
+  bottom: -40px
+  &:before
+    border-top: 8px solid #B1CD00    
+
+.flex-control-nav
+  &:hover
+    .flex-control-nav__prev, .flex-control-nav__next
+      opacity: 1
 
 .pswp__bg
   background: rgba(1,1,1,0.9) !important
@@ -61,6 +102,18 @@
     .flex-control-nav
 
       width: 156px
+      li 
+        height: 90px
+        margin-bottom: 15px
+
+        img 
+          padding: 2px  0
+    .flex-control-nav__next, .flex-control-nav__prev
+      padding: 0  
+    .flex-control-nav__prev
+      top: -30px
+    .flex-control-nav__next
+      bottom: -30px  
 
 @media screen and (max-width: 1439px)	   
   .single-product 
