@@ -1,0 +1,59 @@
+.krel-slider 
+  position: relative
+
+
+.krel-draggable 
+  overflow: hidden
+  cursor: pointer
+
+.krel-slide 
+  display: inline-block
+  vertical-align: top
+
+.krel-arrows 
+  width: 50px
+  height: 50px
+  background: brown
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  cursor: pointer
+  z-index: 1000
+
+
+.krel-next 
+  right: 25px
+
+.krel-prev 
+  left: 25px
+
+.krel-slide img 
+  display: inline-block
+  max-width: 100%
+
+.krel-dots 
+  display: flex
+  justify-content: center
+  position: absolute
+  bottom: 25px
+  width: 100%
+
+.krel-dote 
+  padding: 5px
+  margin: 0 2.5px
+  display: inline-block
+  cursor: pointer
+  &::before
+    
+    content: ''
+    height: 10px
+    width: 10px
+    display: block
+    background: #fff
+    border-radius: 50%
+
+.krel-dots-active 
+  opacity: 1
+  &::before
+    background: #AFD80F
+

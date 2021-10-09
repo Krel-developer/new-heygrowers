@@ -31,7 +31,11 @@ class LiteSlider {
     this.renderButtons()
 
     if (window.innerWidth > this.options.response) {
-      this.initEventListeners()
+      if (this.checkIsActive()) {
+        this.initEventListeners()
+      } else {
+        document.querySelector('.krel-next').style.display = 'none'
+      }
     } else {
       this.$parent.classList.add('krel-lite-mobile')
     }
@@ -75,7 +79,9 @@ class LiteSlider {
     this.$draggable.append(this.$krelTrack)
     this.$parent.append(this.$draggable)
   }
-
+  checkIsActive() {
+    return this.$draggable.offsetWidth > this.$parent.offsetWidth
+  }
   renderButtons() {
     const prevButton = this.createElement('krel-arrows krel-prev')
     prevButton.style.display = 'none'

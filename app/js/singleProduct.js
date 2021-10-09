@@ -1,3 +1,4 @@
+import { liteSlider } from '../libs/krel-slider-lite/krelSliderLite'
 import { initBtnAddToCartAnim } from './elements/animAddToCart'
 function initRadioButtonForSelected() {
   const variations = document.querySelector('.variations select')
@@ -6,7 +7,6 @@ function initRadioButtonForSelected() {
     const radioContainer = document.createElement('div')
     radioContainer.classList.add('radio__cont')
     variations.after(radioContainer)
-    console.log(variations.children)
     for (let options = 1; options < variations.children.length; options++) {
       const radio = document.createElement('input')
       radio.setAttribute('type', 'radio')
@@ -41,7 +41,6 @@ function centeringProductImage() {
     images.forEach((img) => {
       const imgWidth = img.offsetWidth
       const parentWidth = img.parentNode.offsetWidth
-      console.log(imgWidth, parentWidth)
       if (imgWidth > parentWidth) {
         img.parentNode.style.position = 'relative'
         img.style.position = 'absolute'
@@ -52,7 +51,6 @@ function centeringProductImage() {
 }
 function createArticul() {
   const art = document.querySelector('.product_meta .sku_wrapper')
-  console.log(art)
   if (!art) {
     const id = document
       .querySelector('.single__product__cont')
@@ -68,7 +66,6 @@ function initThumbArrow() {
   setTimeout(() => {
     const thums = document.querySelector('.flex-control-nav')
     if (thums) {
-      console.log(thums)
       const cont = document.createElement('div')
       const contNav = document.createElement('div')
 
@@ -95,7 +92,6 @@ function initThumbArrow() {
 
       const maxTranslate =
         +contNav.offsetHeight * (Math.ceil(thums.children.length / 3) - 1)
-      console.log('maxTranslate', maxTranslate)
       function moveThumb(dir = 'next') {
         let newTranslate
         const translate = +thums.dataset.translate
@@ -104,7 +100,6 @@ function initThumbArrow() {
         } else {
           newTranslate = translate - contNav.offsetHeight
         }
-        console.log(translate, newTranslate)
         thums.dataset.translate = newTranslate
         if (newTranslate === 0) {
           prev.style.display = 'none'
@@ -128,24 +123,35 @@ document.addEventListener('DOMContentLoaded', () => {
   initBtnAddToCartAnim()
   initRadioButtonForSelected()
   initThumbArrow()
-  const width = window.screen.availWidth
-
-  const related = document.querySelector('.related')
-  if (related) {
-    if (width < 992) {
-      related.classList.add('custom__products')
-    }
-    window.addEventListener('resize', () => {
-      const width = window.screen.availWidth
-      const related = document.querySelector('.related')
-      if (width < 992) {
-        related.classList.add('custom__products')
-      } else {
-        related.classList.remove('custom__products')
-      }
-    })
-  }
 
   centeringProductImage()
   createArticul()
+
+  const relatedCont = document.querySelector(
+    '.single__product__bottom .related'
+  )
+
+  if (relatedCont) {
+    const section = document.createElement('section')
+    const cont = document.createElement('div')
+    section.classList.add('related')
+    relatedCont.classList.remove('related')
+    cont.classList.add('custom__products')
+    cont.append(relatedCont)
+    section.append(cont)
+    const h2 = relatedCont.querySelector('h2')
+    h2.classList.add('main__title__h2')
+    const h2Cont = document.createElement('div')
+    h2Cont.classList.add('main__title')
+    h2Cont.append(h2)
+    cont.before(h2Cont)
+
+    relatedCont.classList.add('products')
+    document.querySelector('.single__product__cont').after(section)
+
+    // Слайдер хиты продаж
+    liteSlider('.related__cont .products', {
+      response: 767,
+    })
+  }
 })

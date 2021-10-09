@@ -1,10 +1,11 @@
 .single-product
   .single__product__cont
-    padding: 63px 86px 36px 59px
+    padding: 63px 86px 103px 59px
     background: #FFFFFF
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
     display: flex
     flex-wrap: wrap  
+    margin-bottom: 50px
   .woocommerce-message  
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
     .wc-forward  
@@ -16,7 +17,6 @@
 .single__product__bottom
   display: flex
   width: 100%
-  border-top: 1px solid #F0F0F1
   margin-top: 50px
   h2 
     font-weight: 500
@@ -35,12 +35,11 @@
     padding-left: 60px   
 
 .single__product__bottom
-  .related, .woocommerce-tabs 
-    padding-top: 34px
   .woocommerce-tabs  
-    width: 781px
-    padding-right: 20px
+    width: 100%
+    
   .related
+    display: none
     padding-left: 64px  
     width: 736px
 
@@ -62,6 +61,7 @@
   .single-product
     .single__product__cont
       padding: 49px 20px 49px 30px
+      margin-bottom: 30px
     .woocommerce-product-gallery
       width: 543px  
     .summary
@@ -93,7 +93,10 @@
   .single__product__bottom
     .related
       width: 100%
-      
+@media screen and (max-width: 767px) 
+  .single-product
+    .single__product__cont
+      margin-bottom: 25px      
 @media screen and (max-width: 576px)
   .single__product__cont
     padding-left: 15px

@@ -1,0 +1,95 @@
+.main_baner
+  padding: 119px 134px 72px
+  height: 546px
+  background-size: cover !important   
+  box-sizing: border-box
+  .btn
+    margin-top: 44px
+  
+  span
+    margin-top: 31px
+    font-size: 25px
+    line-height: 31px
+  ul 
+    margin-top: 10px
+    li 
+      position: relative
+      padding-left: 31px
+      &:before 
+        content: ''  
+        display: block
+        width: 20px
+        height: 20px
+        position: absolute
+        left: 0
+        bottom: 4px
+        background: url('../img/icon_li.svg')
+  strong
+    font-size: 30px
+    font-weight: 700        
+.main_baner_1
+  background: url('../img/offers/main_offer_1.jpg')
+  background-repeat: no-repeat
+  background-size: cover 
+
+@media screen and (max-width: 1720px)  
+  .main_baner
+    height: 422px
+    padding: 80px 104px 55px
+    span
+      margin-top: 24px
+      font-size: 20px
+      line-height: 24px
+   
+
+@media screen and (max-width: 1439px)  
+  .main_baner
+    height: 364px
+    padding: 53px 90px 48px
+    span
+      margin-top: 25px
+      font-size: 23px
+      line-height: 25px
+    strong
+      font-size: 25px
+
+  
+@media screen and (max-width: 1199px)
+  .main_baner
+    height: 306px
+    padding: 55px 90px 40px
+
+   
+@media screen and (max-width: 991px)     
+  .main_baner
+    height: 364px
+    padding: 54px 41px 48px 
+    
+    background-position-x: right  -170px !important
+    span 
+      width: 300px
+@media screen and (max-width: 767px)     
+  .main_baner
+    height: 303px
+    span 
+      width: 155px
+      margin-top: 18px
+      font-size: 14px
+      line-height: 16px
+@media screen and (max-width: 575px)     
+  .main_baner
+    background-position: center right  -270px !important
+    ul 
+      li 
+        padding-left: 22px
+        &:before 
+          width: 15px
+          height: 15px
+          bottom: 1px
+          background-size: cover
+          font-size: 16px
+          line-height: 24px
+          
+@import 1
+@import 2
+@import 3

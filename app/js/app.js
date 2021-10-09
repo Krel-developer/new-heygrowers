@@ -13,6 +13,7 @@ import { krelMaskInput } from '../libs/krelMaskInput'
 import { initHeader } from './elements/header'
 import { initCookie } from './elements/cookie'
 import { krelLazyLoad } from './elements/lazy'
+import { krelSlider } from '../libs/krel_slider/slider'
 
 // ленивая загрузка
 document.addEventListener('DOMContentLoaded', function () {
@@ -122,6 +123,23 @@ document.addEventListener('DOMContentLoaded', () => {
     productLinks.forEach((link) => {
       link.setAttribute('target', '_blank')
     })
+  }
+
+  const offers = document.querySelector('.offers')
+  if (offers) {
+    krelSlider('.offers', {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinity: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+    })
+
+    const cont = document.querySelector('.offers .container')
+    console.log(window.screen.availWidth, cont)
+    const otstup = (window.screen.availWidth - cont.offsetWidth) / 2
+    document.querySelector('.offers .krel-prev').style.left = otstup + 'px'
+    document.querySelector('.offers .krel-next').style.right = otstup + 'px'
   }
 })
 
