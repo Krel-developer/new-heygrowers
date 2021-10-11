@@ -230,12 +230,10 @@ class KrelSlider extends SliderOptions {
     e.preventDefault()
     this.draggable.start = this.clientX(e)
 
-    this.$draggable.addEventListener('mousemove', this.onDraggebleMove)
-    this.$draggable.addEventListener('touchmove', this.onDraggebleMove)
-    this.$draggable.addEventListener('mouseup', this.onDraggebleEnd)
-    this.$draggable.addEventListener('touchend', this.onDraggebleEnd)
-    this.$draggable.addEventListener('mouseout', this.onDraggebleEnd)
-    this.$draggable.addEventListener('touchcancel', this.onDraggebleEnd)
+    document.addEventListener('mousemove', this.onDraggebleMove)
+    document.addEventListener('touchmove', this.onDraggebleMove)
+    document.addEventListener('mouseup', this.onDraggebleEnd)
+    document.addEventListener('touchend', this.onDraggebleEnd)
   }
 
   onDraggebleMove(e) {
@@ -247,12 +245,10 @@ class KrelSlider extends SliderOptions {
   onDraggebleEnd(e) {
     e.preventDefault()
 
-    this.$draggable.removeEventListener('mousemove', this.onDraggebleMove)
-    this.$draggable.removeEventListener('touchmove', this.onDraggebleMove)
-    this.$draggable.removeEventListener('mouseup', this.onDraggebleEnd)
-    this.$draggable.removeEventListener('touchend', this.onDraggebleEnd)
-    this.$draggable.removeEventListener('mouseout', this.onDraggebleEnd)
-    this.$draggable.removeEventListener('touchcancel', this.onDraggebleEnd)
+    document.removeEventListener('mousemove', this.onDraggebleMove)
+    document.removeEventListener('touchmove', this.onDraggebleMove)
+    document.removeEventListener('mouseup', this.onDraggebleEnd)
+    document.removeEventListener('touchend', this.onDraggebleEnd)
 
     if (Math.abs(this.draggable.delta) > this.slideWidth / 4) {
       if (this.draggable.delta > 0) {

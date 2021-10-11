@@ -80,7 +80,7 @@ class LiteSlider {
     this.$parent.append(this.$draggable)
   }
   checkIsActive() {
-    return this.$draggable.offsetWidth > this.$parent.offsetWidth
+    return this.$draggable.offsetWidth >= this.$parent.offsetWidth
   }
   renderButtons() {
     const prevButton = this.createElement('krel-arrows krel-prev')
