@@ -1,8 +1,7 @@
-#popup__form
+.popup__form
   padding: 20px
   background: #fff
-  width: calc( 100% - 20px )
-  max-width: 400px
+  
   .btn
     border-radius: 10px
     width: 100%
@@ -25,3 +24,77 @@
     margin-top: 20px
 .popup__form__text
   margin: 20px 0    
+
+
+#popup__form  
+  width: calc( 100% - 20px )
+  max-width: 400px
+
+
+.popup__buy__now
+  max-width: 700px
+  width: 100%
+  .tovar
+    display: none
+  
+    
+
+.popup__buy__now__item    
+  margin-top: 30px
+  box-shadow: 0 3.64259px 39.1579px rgba(66,68,84,.08),0 .813621px 8.74642px rgba(79,76,100,.0476886),0 .242236px 2.60404px rgba(0,0,0,.0323114)  
+  padding: 20px 
+  display: flex
+  align-items: center
+  .product-thumbnail
+    display: flex
+    width: 270px
+    height: 172px
+    justify-content: center
+    overflow: hidden
+    img
+      height: 100%  
+      width: auto
+  .cart_item__info
+    padding-left: 45px
+    flex: 1 auto
+  .product-name
+    width: 310px
+    font-size: 20px
+    line-height: 24px
+    color: #676A75   
+    margin-top: 13px 
+  .amount
+    font-weight: bold
+    font-size: 20px
+    line-height: 24px     
+  .product-price
+    width: 160px
+    del
+      display: none
+    .save-percent
+      display: none
+    ins
+      text-decoration:  none    
+    .amount
+      &::after
+        content: 'руб./шт'     
+    .price
+      &::after
+        display: none    
+
+
+@media screen and (max-width: 575px)       
+  .popup__buy__now__item
+    .product-thumbnail  
+      width: 84px 
+      height: 62px    
+
+    .cart_item__info
+      padding-left: 18px
+      width: 154px
+    .product-name   
+      font-size: 12px
+      line-height: 16px
+    .amount
+      font-size: 16px
+      line-height: 20px    

@@ -21,6 +21,46 @@ document.addEventListener('DOMContentLoaded', function () {
   krelLazyLoad()
 })
 
+function initBueNowBtn() {
+  const buyNowBtns = document.querySelectorAll('.buy_now_button')
+  buyNowBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault()
+      const product = {}
+      if (document.body.classList.contains('single-product')) {
+        product.img = document
+          .querySelector('.woocommerce-product-gallery img')
+          .getAttribute('src')
+        product.title = document.querySelector(
+          '.product_title.entry-title'
+        ).textContent
+        product.price = document.querySelector('.price').outerHTML
+      } else {
+        const $parent = btn.closest('.custom__product ')
+        console.log($parent)
+        product.img = $parent.querySelector('img').getAttribute('src')
+        product.title = $parent.querySelector(
+          '.woocommerce-loop-product__title'
+        ).textContent
+        product.price = $parent.querySelector('.price').outerHTML
+      }
+
+      document
+        .querySelector('.popup__buy__now img')
+        .setAttribute('src', product.img)
+
+      document.querySelector('.popup__buy__now .product-price').innerHTML =
+        product.price
+
+      document.querySelector('.popup__buy__now .product-name').textContent =
+        product.title
+      document.querySelector('.popup__buy__now .tovar input').value =
+        product.title.trim()
+      document.querySelector('.buy_now').dispatchEvent(new Event('click'))
+    })
+  })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initCookie()
   //... перезагрузка страницы при изменении размера окна
@@ -56,7 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // попап обратный звонок
   krelPopup('.recall__btn', { anim: 'top' })
+  krelPopup('.buy_now', { anim: 'top' })
   krelMaskInput('popup__phone', '+7 (999) 999-99-99')
+  krelMaskInput('popup__phone__buy', '+7 (999) 999-99-99')
 
   if (width < 992) {
     // открытие меню
@@ -125,22 +167,24 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  // const offers = document.querySelector('.offers')
-  // if (offers) {
-  //   krelSlider('.offers', {
-  //     slidesToShow: 1,
-  //     slidesToScroll: 1,
-  //     infinity: true,
-  //     autoplay: true,
-  //     autoplaySpeed: 3000,
-  //   })
+  const offers = document.querySelector('.offers')
+  if (offers) {
+    krelSlider('.offers', {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinity: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+    })
 
-  //   const cont = document.querySelector('.offers .container')
-  //   console.log(window.screen.availWidth, cont)
-  //   const otstup = (window.screen.availWidth - cont.offsetWidth) / 2
-  //   document.querySelector('.offers .krel-prev').style.left = otstup + 'px'
-  //   document.querySelector('.offers .krel-next').style.right = otstup + 'px'
-  // }
+    const cont = document.querySelector('.offers .container')
+    console.log(window.screen.availWidth, cont)
+    const otstup = (window.screen.availWidth - cont.offsetWidth) / 2
+    document.querySelector('.offers .krel-prev').style.left = otstup + 'px'
+    document.querySelector('.offers .krel-next').style.right = otstup + 'px'
+  }
+  // Быстрый заказ
+  initBueNowBtn()
 })
 
 // прелодер

@@ -12,11 +12,18 @@ export function initBtnAddToCartAnim() {
           const coord = btn.getBoundingClientRect()
           const cartCoord = cart.getBoundingClientRect()
           const anim = document.createElement('div')
+          // let xDelta = 0
           anim.classList.add('btn_anim_add')
+          document.body.append(anim)
+          // console.log(anim.offsetWidth)
+          // if (anim.offsetWidth !== btn.offsetWidth) {
+          //   xDelta = btn.offsetWidth / 2 - anim.offsetWidth / 2
+          // }
           anim.style.top = coord.top + 'px'
           anim.style.left = coord.left + 'px'
-          document.body.append(anim)
+
           anim.style.transition = `${time}ms ease-in`
+
           setTimeout(() => {
             anim.style.top =
               cartCoord.top + (cart.offsetHeight - anim.offsetHeight) / 2 + 'px'
