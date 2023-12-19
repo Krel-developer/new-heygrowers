@@ -11,9 +11,17 @@ footer
       &:nth-child(2)
         width: 400px
       &:nth-child(3)
-        width: 330px
-      &:nth-child(4)
-        width: 358px      
+        width: 330px    
+
+.footer__form
+   width: 358px    
+
+.footer__top 
+  .container 
+    flex-wrap: wrap
+
+
+
 .footer__bottom
   font-size: 15px
   line-height: 18px  
@@ -84,14 +92,16 @@ footer
 @import ../elements/email_form
 
 @media screen and (max-width: 1720px)   
-  footer
-    .container
-      .footer__block
-        &:nth-child(4)
-          display: none
   .footer__card
-    text-align: right          
-@media screen and (max-width: 1199px)    
+    text-align: right       
+
+  .footer__form
+    width: 250px
+    .footer__title
+      font-size: 19px
+      line-height: 26px
+
+@media screen and (max-width: 1439px)    
   .footer__logo__text
     padding-top: 0
     margin-top: 19px
@@ -104,6 +114,10 @@ footer
         &:nth-child(3),  &:nth-child(2)
           order: 2
           margin-top: 20px
+  .footer__form
+    .footer__title     
+      width: 100%   
+      max-width: 441px
 
   footer
     .container

@@ -25,10 +25,16 @@ export function initBtnCheckout(total = null) {
       if (li.children[0].checked) {
         if (
           li.children[0].getAttribute('id') ===
-          'shipping_method_0_free_shipping-8'
+          'shipping_method_0_shipping_sdek'
         ) {
-          const map = document.querySelector('.checkout__map')
-          map.style.height = 500 + map.children[0].offsetHeight + 'px'
+          document.querySelector('.sdek__module').style.display = 'block'
+        }
+
+        if (
+          li.children[0].getAttribute('id') ===
+          'shipping_method_0_local_pickup-1'
+        ) {
+          document.querySelector('.form-row-samovivos').style.display = 'block'
         }
         btn.classList.add('active')
         desc.classList.add('active')
@@ -36,9 +42,9 @@ export function initBtnCheckout(total = null) {
 
       btn.addEventListener('click', checkoutBtnHandler.bind(null, btn, desc))
     }
-    if (total && total < 1000) {
+    if (total && total < 1500) {
       const btnVoid = createBtn(
-        '<div><span>Доставка по Санкт-Петербургу</span> <span>(доступно от 1000руб.)</span></div>',
+        '<div><span>Доставка по Санкт-Петербургу</span> <span>(доступно от 1500руб.)</span></div>',
         'shipping__btn__void'
       )
       btnVoid.classList.add('shipping__btn__void')
@@ -79,10 +85,14 @@ function checkoutBtnHandler(btn, desc) {
     .classList.remove('active')
   btn.classList.add('active')
   desc.classList.add('active')
-  if (btn.dataset.id === 'shipping_method_0_free_shipping-8') {
-    const map = document.querySelector('.checkout__map')
-    map.style.height = 500 + map.children[0].offsetHeight + 'px'
+  if (btn.dataset.id === 'shipping_method_0_shipping_sdek') {
+    document.querySelector('.sdek__module').style.display = 'block'
   } else {
-    document.querySelector('.checkout__map').style.height = null
+    document.querySelector('.sdek__module').style.display = null
+  }
+  if (btn.dataset.id === 'shipping_method_0_local_pickup-1') {
+    document.querySelector('.form-row-samovivos').style.display = 'block'
+  } else {
+    document.querySelector('.form-row-samovivos').style.display = null
   }
 }

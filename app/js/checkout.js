@@ -29,20 +29,6 @@ function sdekShippingActive(e) {
   )
   e.target.blur()
 }
-function sdekShippingChange(mode = 'init') {
-  setTimeout(() => {
-    const town = document.getElementById('billing_city')
-    const adres = document.getElementById('billing_address_1')
-
-    if (mode === 'init') {
-      town.addEventListener('focus', sdekShippingActive)
-      adres.addEventListener('focus', sdekShippingActive)
-    } else {
-      town.removeEventListener('focus', sdekShippingActive)
-      adres.removeEventListener('focus', sdekShippingActive)
-    }
-  }, 100)
-}
 
 function initThankyou() {
   if (document.querySelector('.woocommerce-order-received')) {
@@ -158,11 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (jQuery(this).attr('checked')) {
         const shiping = jQuery(this).val()
 
-        if (shiping === 'free_shipping:8') {
-          sdekShippingChange()
-        } else {
-          sdekShippingChange('destr')
-        }
         if (shiping === 'flat_rate:2') {
           const cost = jQuery(this).parent().children('label').children('span')
           initInfoBlock(cost[0].outerHTML)
@@ -216,4 +197,57 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
   krelMaskInput('billing_phone', '+7 (999) 999-99-99')
+
+  // модуль сдэк
+  window.ourWidjet = new ISDEKWidjet({
+    defaultCity: 'Санкт-Петербург', //какой город отображается по умолчанию
+    cityFrom: 'Санкт-Петербург', // из какого города будет идти доставка
+    // country: 'Россия', // можно выбрать страну, для которой отображать список ПВЗ
+    link: false,
+    popup: true,
+    path: 'https://widget.cdek.ru/widget/scripts/',
+    hidedelt: true,
+  })
+  ourWidjet.binders.add(choosePVZ, 'onChoose')
+  function choosePVZ(wat) {
+    const adres = `г. ${wat.cityName}, ${wat.PVZ.Address}`
+    document.getElementById(
+      'billing_address_2'
+    ).value = ` г. ${wat.cityName}, ${wat.PVZ.Address}`
+    const text = `Вы выбрали пункт выдчи СДЭК по адресу г. ${wat.cityName}, ${wat.PVZ.Address}`
+    document.getElementById('sdek__adress').textContent = text
+
+    krelToast.toast(text)
+  }
+  document.getElementById('billing_address_2').value = ''
+
+  // Поле "нужно ли перезвонить для уточнения заказа"
+
+  const zvonokField = document.querySelector('#order_new_fild1_field input')
+  if (zvonokField) {
+    const zvonokRadios = document.querySelectorAll('.form-row-zvonok input')
+    zvonokRadios.forEach((el) => {
+      if (el.checked) {
+        zvonokField.value = el.value
+      }
+      el.addEventListener('change', () => {
+        zvonokField.value = el.value
+      })
+    })
+  }
+
+  // Поле "Выбор магазина для самовывоза"
+
+  const magazinField = document.querySelector('#billing_new_fild11_field input')
+  if (magazinField) {
+    const magazinRadios = document.querySelectorAll('.form-row-samovivos input')
+    magazinRadios.forEach((el) => {
+      if (el.checked) {
+        magazinField.value = el.value
+      }
+      el.addEventListener('change', () => {
+        magazinField.value = el.value
+      })
+    })
+  }
 })

@@ -7,43 +7,95 @@ body.cookie__init
     transition: 0.4s
 
 #jvlabelWrap
-  bottom: calc(var(--jivo-cookie-margin) + var(--header-bottom-height)) !important
+  // bottom: calc(var(--jivo-cookie-margin) + var(--header-bottom-height)) !important
+  // display: none   
+  bottom: -100px !important
   
 
-.__jivoMobileButton
-  bottom: calc(var(--jivo-cookie-margin) + var(--header-bottom-height)) !important
+// .__jivoMobileButton
+//   bottom: calc(var(--jivo-cookie-margin) + var(--header-bottom-height)) !important
 
+
+.krel__jivo
+  position: fixed
+  right: 30px
+  bottom: calc(var(--jivo-cookie-margin) + var(--header-bottom-height) + 30px) 
+  z-index: 100000000
+
+.krel__jivo__cont
+  display: none
+
+
+
+.krel__jivo__cont__item
+  display: block
+  width: 50px
+  height: 50px  
+  border-radius: 50%
+  margin-top: 5px
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 50%
+  svg 
+    width: 12px
+    rect 
+      fill: #9696bd 
+
+.krel__jivo__active 
+  .krel__jivo__cont 
+    display: block
+  .krel__jivo__btn
+    display: none  
+   
 
 @media screen and (max-width: 575px)
   .__jivoMobileButton
-    bottom: 10px !important
-    right: -5px !important
-    &>jdiv
-      &:last-child               
-        width: 32px !important
-        height: 32px !important     
-        &>jdiv 
-          &:first-child
-            z-index: 10
-            width: 13px
-            height: 13px
-            &>jdiv 
-              font-size: 8px
-              font-weight: 400
-              font-family: Formular    
-          &:last-child
-            width: 32px !important
-            height: 32px !important  
-            &>jdiv
-              &:first-child              
-                width: 5px
-                height: 17px
-                background-size: 5px 17px !important 
-              &:last-child               
-                width: 17px
-                height: 15px
-                background-size: 17px 15px !important 
-                background-position: 0 !important
+    display: none !important
+  .krel__jivo
+    position: fixed
+    right: 6px
+    bottom: 30px
+    width: 50px
+  .krel__jivo__cont__item
+    margin-top: 10px
+
+  .krel__jivo__btn, .krel__jivo__close
+    width: 32px
+    height: 32px
+    margin: 0 auto 
+    margin-top: 20px  
+      
+    // bottom: 10px !important
+    // right: -5px !important
+    // &>jdiv
+    //   &:last-child               
+    //     width: 32px !important
+    //     height: 32px !important     
+    //     &>jdiv 
+    //       &:first-child
+    //         z-index: 10
+    //         width: 13px
+    //         height: 13px
+    //         &>jdiv 
+    //           font-size: 8px
+    //           font-weight: 400
+    //           font-family: Formular    
+    //       &:last-child
+    //         width: 32px !important
+    //         height: 32px !important  
+    //         &>jdiv
+    //           &:first-child              
+    //             width: 5px
+    //             height: 17px
+    //             background-size: 5px 17px !important 
+    //           &:last-child               
+    //             width: 17px
+    //             height: 15px
+    //             background-size: 17px 15px !important 
+    //             background-position: 0 !important
 
 
 

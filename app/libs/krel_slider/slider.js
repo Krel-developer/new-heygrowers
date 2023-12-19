@@ -227,7 +227,7 @@ class KrelSlider extends SliderOptions {
   }
 
   onDraggebleStart(e) {
-    e.preventDefault()
+    // e.preventDefault()
     this.draggable.start = this.clientX(e)
 
     document.addEventListener('mousemove', this.onDraggebleMove)
@@ -239,11 +239,11 @@ class KrelSlider extends SliderOptions {
   onDraggebleMove(e) {
     this.draggable.delta = +this.draggable.start - this.clientX(e)
     this.krelTrackTranslate(this.translateValue - this.draggable.delta)
-    e.preventDefault()
+    // e.preventDefault()
   }
 
   onDraggebleEnd(e) {
-    e.preventDefault()
+    // e.preventDefault()
 
     document.removeEventListener('mousemove', this.onDraggebleMove)
     document.removeEventListener('touchmove', this.onDraggebleMove)

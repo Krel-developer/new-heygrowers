@@ -1,10 +1,15 @@
 .info__item__contacts
+  margin-bottom: 40px
   .info__item__left
     flex-grow: 1
     display: flex
     flex-wrap: wrap
-    justify-content: space-between
+    justify-content: space-around
+    align-items: center
   
+
+
+
 @media screen and (max-width: 1439px)	  
   .info__item__contacts
     .info__item__right
@@ -21,6 +26,11 @@
     .info__item__right
       img
         width: 100%
+
+  .info__item__contacts_last
+    .info__item__right
+      order: 2
+
 
 @media screen and (max-width: 767px)	   
   .info__item__contacts

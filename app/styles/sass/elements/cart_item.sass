@@ -22,10 +22,27 @@
     display: inline-block
     vertical-align: middle
     width: 160px
+    position: relative
     del
-      display: none
+      color: #bdbdbd
+      display: block
+      .amount
+        font-weight: 400
+        &:after
+          display: none
     .save-percent
-      display: none
+      position: absolute
+      top: -1px
+      right: 2px
+      padding: 5px 0
+      font-weight: 500
+      font-size: 13.6597px
+      line-height: 17px
+      color: #FFFFFF
+      width: 50px
+      text-align:  center
+      background: linear-gradient(90deg, #FF5151 0%, #F55B7A 51.25%, #FF535C 88.02%)
+      border-radius: 10px
     ins
       text-decoration:  none    
     .amount
@@ -67,6 +84,10 @@
       padding: 14px 22px
       border-radius: 10px     
       margin-bottom: 0 !important
+    .save-percent, del 
+      display: none !important  
+    ins 
+      text-decoration: none !important
 
   .product-remove
     display: flex

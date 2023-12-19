@@ -3,6 +3,8 @@ let preprocessor = 'sass', // Preprocessor (sass, less, styl); 'sass' also work 
 const myDest =
   '../../domains/new-heygrowers/wp-content/themes/new-heygrowers/assets/templates/'
 
+// const myDest = 'app/assets/templates/'
+
 const { src, dest, parallel, series, watch } = require('gulp')
 const browserSync = require('browser-sync').create()
 const bssi = require('browsersync-ssi')

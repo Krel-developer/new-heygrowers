@@ -61,19 +61,40 @@ function initBueNowBtn() {
   })
 }
 
+function initKrelJivo() {
+  const krelJivoCont = document.querySelector('.krel__jivo')
+  function krelJivoClose() {
+    krelJivoCont.classList.remove('krel__jivo__active')
+  }
+  function krelJivoOpen() {
+    krelJivoCont.classList.add('krel__jivo__active')
+  }
+  document
+    .querySelector('.krel__jivo__btn')
+    .addEventListener('click', krelJivoOpen)
+  document
+    .querySelector('.krel__jivo__close')
+    .addEventListener('click', krelJivoClose)
+
+  document
+    .querySelector('.krel__jivo__cont__item__chat')
+    .addEventListener('click', () => {
+      jivo_api.open()
+    })
+}
 document.addEventListener('DOMContentLoaded', () => {
   initCookie()
   //... перезагрузка страницы при изменении размера окна
   const width = window.screen.availWidth
 
   // перезагрузка при изменение ширины экрана
-  window.addEventListener('resize', function () {
-    if (width != window.screen.availWidth) {
-      document.body.style.display = 'none'
-      window.location.href = window.location.href
-      return
-    }
-  })
+  // window.addEventListener('resize', function () {
+  //   if (width != window.screen.availWidth) {
+  //     document.body.style.display = 'none'
+  //     window.location.href = window.location.href
+  //     return
+  //   }
+  // })
 
   initHeader()
   // Инициализация меню
@@ -99,6 +120,15 @@ document.addEventListener('DOMContentLoaded', () => {
   krelPopup('.buy_now', { anim: 'top' })
   krelMaskInput('popup__phone', '+7 (999) 999-99-99')
   krelMaskInput('popup__phone__buy', '+7 (999) 999-99-99')
+
+  // маска для номера телефона в мой аккаунт
+  if (
+    document.querySelector(
+      '.woocommerce-MyAccount-content .woocommerce-address-fields__field-wrapper'
+    )
+  ) {
+    krelMaskInput('billing_phone', '+7 (999) 999-99-99')
+  }
 
   if (width < 992) {
     // открытие меню
@@ -185,12 +215,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // Быстрый заказ
   initBueNowBtn()
+
+  // информационный блок
+  const notifBtn = document.querySelector('.header__notification__close')
+  if (notifBtn) {
+    notifBtn.addEventListener('click', () => {
+      document.querySelector('.header__notification').style.display = 'none'
+    })
+  }
+
+  initKrelJivo()
 })
 
 // прелодер
-window.addEventListener('load', function () {
-  document.querySelector('body').classList.add('loaded_hiding')
-  setTimeout(() => {
-    document.querySelector('body').classList.add('loaded')
-  }, 200)
-})
+// window.addEventListener('load', function () {
+//   document.querySelector('body').classList.add('loaded_hiding')
+//   setTimeout(() => {
+//     document.querySelector('body').classList.add('loaded')
+//   }, 200)

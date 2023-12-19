@@ -1,0 +1,48 @@
+.in-stock 
+  display: none
+  
+.krel__stock__text
+  margin: 20px 0
+  
+.krel__stock__item
+  padding: 15px 0
+  border-top: 1px solid #c7ccd3
+
+.krel__stock__item__title
+  margin-bottom: 10px
+
+.ks_instock
+  // font-weight: 700
+  padding-left: 30px
+  position: relative
+  &:after 
+    content: ''
+    width: 20px
+    height: 20px
+    display: block 
+    position: absolute    
+    
+    background-size: cover !important
+    top: 0
+    left: 0
+
+.ks_instock_big
+  color: #B1CD00
+  &:after 
+    background: url('../img/succes_icon.svg') 
+
+.ks_instock_middle
+  color: #fdaa01
+  &:after 
+    
+    background: url('../img/atention_icon.svg') 
+
+.ks_instock_small
+  color: #eb5757
+  &:after 
+    background: url('../img/wrong_icon.svg') 
+
+
+.ks_outstock
+  color: #bdbdbd
+
