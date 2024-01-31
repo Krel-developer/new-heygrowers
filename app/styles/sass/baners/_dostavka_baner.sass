@@ -1,9 +1,12 @@
 .dostavka_baner
   padding: 2.4% 5% 2.2%
   height: 320px
-  background: url('../img/offers/dostavka_offer.jpg')
-  background-size: cover
-  background-position: right center
+  background: linear-gradient(90deg, #ADD2FC 56.27%, rgba(203, 224, 247, 0.00) 97.92%), url('../img/offers/dostavka_offer.jpg')
+  background-size: 834px 100% ,  cover
+  background-position: left center, right center
+  background-repeat: no-repeat
+  .baner__title
+    font-size: 40px
 @media screen and (max-width: 1720px)   
   .dostavka_baner
     height: 248px
@@ -14,13 +17,14 @@
 @media screen and (max-width: 1199px)      
   .dostavka_baner
     height: 214px
-    background-position: right 43%   center
+    background-position: left center, right 43%   center
+    .baner__title
+      font-size: 33px
 @media screen and (max-width: 991px)  
   .dostavka_baner
     padding: 25px 28px 31px
     height: 240px
-    span
-      width: 136px
+    
 @media screen and (max-width: 767px) 
   .dostavka_baner
     height: 311px
@@ -28,4 +32,11 @@
     background-position:  right
     background-repeat: no-repeat
     background-size: auto 296px, 100%
+    .baner__title
+      font-size: 25px
+      width: 300px
+      br
+        display: none
+    span
+      width: 215px    
     
