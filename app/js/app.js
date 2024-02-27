@@ -225,6 +225,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initKrelJivo()
+
+  // document.addEventListener('wpcf7submit', function (event) {
+  //   document.querySelector('#popup__form').classList.add('popup_is_loading')
+  // })
+
+  document.querySelector('#popup__form .btn').addEventListener('click', () => {
+    document.querySelector('#popup__form').classList.add('popup_is_loading')
+  })
+
+  const formEventList = [
+    'wpcf7invalid',
+    'wpcf7spam',
+    'wpcf7mailsent',
+    'wpcf7mailfailed',
+    // 'wpcf7submit',
+  ]
+
+  formEventList.forEach((event) => {
+    document.addEventListener(event, () => {
+      setTimeout(() => {
+        document
+          .querySelector('#popup__form')
+          .classList.remove('popup_is_loading')
+      }, 0)
+    })
+  })
 })
 
 // прелодер

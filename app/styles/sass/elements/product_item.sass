@@ -122,12 +122,33 @@
           background: url('../img/wishlist_item_icon.svg') 
     .product-type-grouped
       .button 
-        width: 100%   
+        width: 100%  
+
+
+.price_out_of_stock
+  order: -1      
+  font-size: 14px
+  line-height: 17px
+  color: #bdbdbd
+  font-weight: 400  
+  height: 24px
+  display: none
+
 .custom__product.outofstock  
   #sbw_wc-adding-button-archive
     display: none
   .button
     width: 100%  
+  .price 
+    display: none
+  .price_out_of_stock
+    display: flex 
+    align-items: flex-end  
+
+      
+  
+
+
 @media screen and (max-width: 1720px)	      
   .custom__products
     .products 
