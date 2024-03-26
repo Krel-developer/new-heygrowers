@@ -1,4 +1,6 @@
 import { krelToast } from '../libs/krel-toast/krel-toast'
+import { initCheckoutLegalBtns } from './elements/checkoutLegalBtns'
+import { initDaDataOptions } from './elements/daDataOptions'
 import { initBtnCheckout } from './elements/initBtnCheckout'
 // кнопки доставки в оформлении заказа
 
@@ -166,6 +168,15 @@ document.addEventListener('DOMContentLoaded', () => {
     ).style.display = 'block'
   })
 
+  // заполняем поле скидка
+  const $saleField = document.querySelector('#billing_new_fild12_field input')
+
+  if ($saleField) {
+    $saleField.value = document
+      .getElementById('krel-loyalty-sale-value')
+      .textContent.trim()
+  }
+
   initThankyou()
   window.krelToast = krelToast
 
@@ -250,4 +261,10 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
   }
+
+  // Иницициализурем кнопки выбора физ/юр лица
+  initCheckoutLegalBtns()
+
+  // Настраиваем поля daData
+  initDaDataOptions()
 })

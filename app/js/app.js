@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  initKrelJivo()
+  // initKrelJivo()
 
   // document.addEventListener('wpcf7submit', function (event) {
   //   document.querySelector('#popup__form').classList.add('popup_is_loading')

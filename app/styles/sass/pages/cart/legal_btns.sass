@@ -1,0 +1,66 @@
+// Кнопки физ/юр лицо
+
+
+
+.krel__legal__btns
+  margin-top: 10px
+  margin-bottom: 30px
+  background: #fbfbfb
+  display: flex 
+
+
+
+.krel__legal__btn
+  padding: 20px
+  text-align: center  
+  cursor: pointer
+  width: 50%
+  &:hover 
+    background: #afd80f
+    color: #fff
+
+.krel__legal__btn_active
+  background: #afd80f
+  color: #fff
+
+#ship-to-different-address
+  display: none
+
+    
+.woocommerce-shipping-fields__field-wrapper
+  .form-row label
+    display: block
+    margin-bottom: 10px
+    abbr 
+      text-decoration: none
+
+#billing_ogrn_field , #billing_company_fio_field , #billing_inn_field , #billing_address_field
+  .woocommerce-input-wrapper
+    position: relative
+    &:after 
+      content: ''
+      height: 100%
+      width: 100%
+      background: rgba(251, 251, 251, 0.5)
+      display: block
+      top: 0 
+      left: 0
+      position: absolute
+
+
+#fiz_ur_field
+  display: none  
+
+#billing_company_fio_field,   #billing_ogrn_field, #billing_inn_field, #billing_address_field
+  display: none
+  
+
+
+// пока что отключаем выбор
+// .woocommerce-shipping-fields, .krel__legal__btns
+//   display: none
+
+@media screen and (max-width: 575px)	 
+  .krel__legal__btn
+    padding: 10px 0
+
