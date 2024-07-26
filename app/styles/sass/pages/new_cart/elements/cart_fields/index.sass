@@ -1,0 +1,67 @@
+.krel__checkout__fields
+  padding-top: 45px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+
+.krel__checkout__fields__column
+  width: calc( 50% - 17px )
+
+.krel__checkout__field
+  margin-bottom: 30px
+ 
+  input, textarea
+    
+    border: 1px solid #E0E0E0
+    border-radius: 5px
+    padding: 15px
+    width: 100%
+    font-size: 16px
+    line-height: 20px
+    font-family: Formular
+
+    &::placeholder
+      color: #A0A0A0
+
+  textarea
+    max-height:  134px
+  .krel__checkout__field_error
+    border: 1px solid #E94040
+
+    
+
+.krel__checkout__field__title
+  margin-bottom: 15px
+  font-size: 15px
+  line-height: 18px
+
+
+// стили для аоля телефон
+.billing_phone__field
+  padding-left: 73px
+  position: relative
+  border: 1px solid #E0E0E0
+  border-radius: 5px
+  &::before
+    color: #A0A0A0
+    left: 24px 
+    height: 100%
+    top: 0
+    content: '+7'
+    padding: 15px 0
+    padding-right: 29px
+    border-right: 1px solid #E0E0E0
+    position: absolute
+  input
+    border: none  
+
+@media screen and (max-width: 767px)	  
+  .krel__checkout__fields__column 
+    width: 100%
+    
+  .krel__checkout__field
+    
+    
+    margin-bottom: 16px
+

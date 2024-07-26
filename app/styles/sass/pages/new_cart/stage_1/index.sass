@@ -1,0 +1,18 @@
+@import ./cart_item
+
+// Ширина колонок описана в следующем файле
+@import ./cart_items_column_width
+
+// Заголовки для колонок
+@import ./cart_items_titles
+
+
+.custom_checkout_cart__stage__block[data-stage="1"]
+  .coupon
+    display: none
+  .woocommerce-notices-wrapper
+    display: none !important  
+  .cart
+    .button
+      display: none
+

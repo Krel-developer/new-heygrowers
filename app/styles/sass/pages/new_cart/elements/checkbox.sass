@@ -1,0 +1,50 @@
+@mixin checkbox() 
+  & 
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+
+  &+label 
+    display: inline-flex
+    align-items: center
+    user-select: none
+    font-size: 16px
+    line-height: 20px
+    cursor: pointer
+    width: 100%
+
+
+  &+label::before 
+    content: ''
+    display: inline-block
+    width: 20px
+    height: 20px
+    flex-shrink: 0
+    flex-grow: 0
+    border: 1px solid #DFDFDF
+    box-sizing: border-box
+    margin-right: 10px
+    border-radius: 2px
+    vertical-align: bottom
+
+
+  &:not(:disabled):not(:checked)+label:hover::before 
+    border-color: #B1CD00
+
+
+  &:not(:disabled):active+label::before 
+    border-color: #B1CD00
+
+
+  &:focus:not(:checked)+label::before 
+    border-color: #B1CD00
+
+
+  &:checked+label::before 
+    background-color: #B1CD00
+
+.krel_checkout__shipping__contacts__account__radio 
+  @include checkbox() 
+
+    

@@ -1,0 +1,74 @@
+@import ./cart_shipping_items/samovivoz
+@import ./cart_shipping_items/sdek
+
+
+
+
+.krel_checkout__shipping__item  
+  padding: 36px 35px 
+  background: #fff
+  margin-bottom: 13px
+  border: 1px solid #fff
+  .krel_checkout__shipping__radio
+    width: 100%
+    span 
+      font-weight: 500 
+      font-size: 25px
+      line-height: 30px
+      padding-left: 67px
+      &:after 
+        top: 3px
+
+
+      &:before 
+        top: 6px
+
+.krel_checkout__shipping__item__text
+  max-width: 964px
+  margin-top: 15px
+  font-size: 15px
+  line-height: 24px
+  color: #A0A0A0
+  padding-left: 67px
+
+
+.krel_checkout__shipping__item__cont
+  height: 0
+  overflow: hidden
+
+.krel_checkout__shipping__item_active
+  border: 1px solid #afd80f
+  .krel_checkout__shipping__item__cont
+    height: auto
+  .krel_checkout__shipping__item__cont
+    overflow:  visible  
+
+.krel_checkout__shipping__item__cont
+  padding-left: 67px  
+
+
+
+@media screen and (max-width: 767px)	   
+  .krel_checkout__shipping__item  
+    padding: 17px 24px 23px
+    .krel_checkout__shipping__radio
+      span 
+        font-size: 18px
+        line-height: 22px 
+        padding-left: 40px
+        &:after 
+          top: 1px
+
+
+        &:before 
+          top: 4px
+
+  .krel_checkout__shipping__item__text
+    display: none
+
+  .krel_checkout__shipping__item_active  
+    .krel_checkout__shipping__item__text
+      display: block
+
+  .krel_checkout__shipping__item__text, .krel_checkout__shipping__item__cont
+    padding-left: 0

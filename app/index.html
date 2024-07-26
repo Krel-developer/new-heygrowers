@@ -1,232 +1,218 @@
 <!--#set var="title" value="OptimizedHTML 5" -->
 <!--#include virtual="/parts/header.html" -->
-<section>
-  <div class="container">
-    <div class="main_baner main_baner_1 baner baner_radius big_baner">
-      <div>
-        <div class="baner__title">
-          Удобрения и <br />
-          стимуляторы
+<div class="container">
+  <div class="custom_checkout_cart">
+    <div class="custom_checkout_cart__left">
+      <div class="krel_checkout__stages">
+        <div class="krel_checkout__stages__item kc_active" data-stage="1">
+          Этап 1
+          <span>Корзина</span>
         </div>
-        <span
-          >Самые выгодные предложения <br />
-          подготовки к сезону!</span
+        <div class="krel_checkout__stages__item" data-stage="2">
+          Этап 2
+          <span>Доставка</span>
+        </div>
+        <div class="krel_checkout__stages__item" data-stage="3">
+          Этап 3
+          <span>Оформление</span>
+        </div>
+
+        <div class="krel_checkout__stages__cart__count">
+          Товаров
+          <span class="cart__count">5</span>
+        </div>
+      </div>
+
+      <input type="text" id="kek" value="" />
+
+      <div
+        class="woocommerce-cart-form custom_checkout_cart__stage__block"
+        data-stage="1"
+      >
+        корзина
+      </div>
+
+      <div
+        class="krel_checkout__shipping custom_checkout_cart__stage__block kc_active"
+        data-stage="2"
+      >
+        <div
+          class="krel_checkout__shipping__item krel_checkout__shipping__item_active"
+        >
+          <label class="krel_checkout__shipping__radio">
+            <input type="radio" value="Нет" class="custom-radio" name="kek" />
+            <span>Нет</span>
+          </label>
+          <div class="krel_checkout__shipping__item__text">
+            Множество пунктов выдачи заказов (ПВЗ) в различных городах России и
+            стран СНГ. Услуги доставки оплачиваются при получении, стоимость
+            доставки вам сообщит оператор после подтвержедния заказа
+          </div>
+
+          <div class="krel_checkout__shipping__item__cont">
+            <div class="krel__checkout__fields">
+              <div class="krel__checkout__fields__column">
+                <div class="krel__checkout__field">
+                  <input
+                    type="text"
+                    placeholder="Что то"
+                    data-parent="kek"
+                    class="krel__checkout__field_error"
+                  />
+                </div>
+                <div class="krel__checkout__field">
+                  <input type="text" placeholder="Что то" />
+                </div>
+              </div>
+
+              <div class="krel__checkout__fields__column">
+                <div class="krel__checkout__field">
+                  <input type="text" placeholder="Что то" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom_checkout_cart__stage__block" data-stage="3">
+        <div class="krel_checkout__shipping__contacts">
+          <div class="krel_checkout__shipping__contacts__title">
+            Контактная информация
+          </div>
+          <div class="krel__checkout__fields">
+            <div class="krel__checkout__fields__column">
+              <div class="krel__checkout__field">
+                <input type="text" placeholder="Что то" />
+              </div>
+              <div class="krel__checkout__field">
+                <input type="text" placeholder="Что то" />
+              </div>
+
+              <div class="krel__checkout__field">
+                <input type="text" placeholder="мйл" />
+              </div>
+            </div>
+
+            <div class="krel__checkout__fields__column">
+              <div
+                class="krel__checkout__field krel_checkout__shipping__contacts__legal"
+              >
+                <div class="krel_checkout__shipping__contacts__legal_active">
+                  Физическое лицо
+                </div>
+                <div>Юридическое лицо</div>
+              </div>
+              <div class="krel__checkout__field">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="krel_checkout__shipping__contacts krel_checkout__shipping__contacts_gray"
+        >
+          <div class="krel__checkout__fields">
+            <div class="krel__checkout__fields__column">
+              <div class="krel__checkout__field__title">
+                Нужно ли перезвонить для уточнения заказа?
+              </div>
+              <label class="krel_checkout__shipping__radio">
+                <input
+                  type="radio"
+                  value="Да"
+                  class="custom-radio"
+                  name="kek"
+                />
+                <span>Да</span>
+              </label>
+              <label class="krel_checkout__shipping__radio">
+                <input
+                  type="radio"
+                  value="Нет"
+                  class="custom-radio"
+                  name="kek"
+                />
+                <span>Нет</span>
+              </label>
+            </div>
+            <div class="krel__checkout__fields__column">
+              <div class="krel__checkout__field__title">Способ оплаты</div>
+              <label class="krel_checkout__shipping__radio">
+                <input
+                  type="radio"
+                  value="Нет"
+                  class="custom-radio"
+                  name="kek"
+                />
+                <span>Оплата при получении</span>
+              </label>
+              <label class="krel_checkout__shipping__radio">
+                <input
+                  type="radio"
+                  value="Нет"
+                  class="custom-radio"
+                  name="kek"
+                />
+                <span>Онлайн оплата</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom_checkout_cart__right">
+      <div class="custom_checkout_cart__right__cont">
+        <h2>Информация о заказе</h2>
+        <div class="custom_checkout_cart__right__item">
+          <div>Сумма</div>
+          <div>
+            <strong
+              ><span class="woocommerce-Price-amount amount"
+                ><bdi
+                  >3,191<span class="woocommerce-Price-currencySymbol"
+                    ><span class="rur">р<span>уб.</span></span></span
+                  ></bdi
+                ></span
+              ></strong
+            >
+          </div>
+        </div>
+        <div
+          class="btn custom_checkout_cart__stages__btn kc_active"
+          data-stage="1"
+        >
+          Продолжить оформление 1
+        </div>
+        <div class="btn custom_checkout_cart__stages__btn" data-stage="2">
+          Продолжить оформление 2
+        </div>
+        <div class="btn custom_checkout_cart__stages__btn" data-stage="3">
+          Продолжить оформление 3
+        </div>
+
+        <div
+          class="custom_checkout_cart__right__cont__preloader"
+          style=""
+        ></div>
+      </div>
+      <div class="custom_checkout_cart__right__policy">
+        Оформляя заказ, вы принимаете условия Пользовательских соглашений и
+        даёте согласие на обработку персональных данных согласно
+        <a href="http://new-heygrowers/privacy-policy/"
+          >Политике конфиденциальности</a
+        >
+        .
+      </div>
+      <div class="custom_checkout_cart__right__sale">
+        В нашем магазине действует система скидок.
+        <a href="http://new-heygrowers/sistema-lojalnosti/" target="_blank"
+          >Подробнее о том как получить скидку</a
         >
       </div>
-      <div>
-        <a href="" class="btn">К покупкам</a>
-      </div>
     </div>
-  </div>
-</section>
-
-<section class="popular">
-  <div class="container">
-    <div class="main__title">
-      <h2 class="main__title__h2">Популярные категории</h2>
-      <a href="" class="main__title__link">Перейти в каталог </a>
-    </div>
-    <div class="popular___cont category__cont">
-      <ul class="products">
-        <!--#include virtual="/parts/elements/category_item.html" -->
-        <!--#include virtual="/parts/elements/category_item.html" -->
-        <!--#include virtual="/parts/elements/category_item.html" -->
-        <!--#include virtual="/parts/elements/category_item.html" -->
-        <!--#include virtual="/parts/elements/category_item.html" -->
-        <!--#include virtual="/parts/elements/category_item.html" -->
-        <!--#include virtual="/parts/elements/category_item.html" -->
-        <!--#include virtual="/parts/elements/category_item.html" -->
-        <!--#include virtual="/parts/elements/category_item.html" -->
-        <!--#include virtual="/parts/elements/category_item.html" -->
-        <!--#include virtual="/parts/elements/category_item.html" -->
-        <!--#include virtual="/parts/elements/category_item.html" -->
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="dostavka_baner baner baner_radius big_baner">
-      <div>
-        <div class="baner__title">
-          Бесплатная <br />
-          доставка
-        </div>
-        <span>При заказазе от 10 000 т.р. </span>
-      </div>
-      <div>
-        <a href="" class="btn">К покупкам</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="email_baner baner baner_radius big_baner">
-      <div>
-        <div class="baner__title">
-          Подпишитесь <br />
-          на рассылку
-        </div>
-        <span
-          >И будьте вкурсе <br />
-          последних акций и новинок
-        </span>
-      </div>
-      <div>
-        <form action="" class="email_form">
-          <input type="text" placeholder="Введите ваш Email" />
-          <button class="btn">Подписаться</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="novinki">
-  <div class="container">
-    <div class="main__title">
-      <h2 class="main__title__h2">Новинки</h2>
-      <a href="" class="main__title__link">Показать все </a>
-    </div>
-    <div class="novinki__cont">
-      <div class="novinki__left custom__products">
-        <ul class="products">
-          <!--#include virtual="/parts/elements/product_item.html" --><!--#include virtual="/parts/elements/product_item.html" --><!--#include virtual="/parts/elements/product_item.html" --><!--#include virtual="/parts/elements/product_item.html" -->
-          <!--#include virtual="/parts/elements/product_item.html" --><!--#include virtual="/parts/elements/product_item.html" --><!--#include virtual="/parts/elements/product_item.html" --><!--#include virtual="/parts/elements/product_item.html" -->
-        </ul>
-      </div>
-      <div class="novinki__right baner">
-        <div>
-          <div class="baner__title">
-            Угольные <br />
-            фильтры
-          </div>
-          <span>Magic Air</span>
-        </div>
-        <div>
-          все объемы <br />
-          от 100 м3 до 2500 м3 <br /><br />
-          <a href="" class="btn">К покупкам</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--#include virtual="/parts/sliders.html" -->
-
-<section class="about">
-  <div class="container">
-    <h2>Широкий ассортимент и выское качество</h2>
-    <div class="about__text">
-      <div>
-        У нас вы найдете все необходимое для создания и обслуживания домашней
-        оранжереи: гроутенты и гроубоксы, органические и минеральные удобрения,
-        универсальные субстраты для гидропонных систем. В магазине Heygrowers
-        есть всё для идеального роста и рекордного урожая.
-      </div>
-      <div>
-        Предлагаем отдельные комплектующие и полностью готовые системы, средства
-        для нейтрализации запахов, стимуляторы роста и многое другое для
-        гидропоники. Товары для гровинга представлены в разных ценовых
-        категориях — от оборудования начального уровня до передовых систем
-        домашней гидропоники, укомплектованных по последнему слову техники.
-      </div>
-      <div>
-        Heygrowers — гроушоп для любителей и профессионалов. Тем, кто делает
-        первые шаги в гровинге, поможем подобрать недорогое оборудование для
-        выращивания растений в домашних условиях. Подберем правильное освещение,
-        бесшумную вентиляцию, эффективную систему полива. Если growing уже стал
-        для вас увлекательным хобби, поможем подобрать эффективные удобрения и
-        стимуляторы роста, чтобы довести урожайность до новых рекордов.
-      </div>
-      <div>
-        Приходите в наш магазин на улице Уточкина дом 7 в Приморском районе
-        Санкт-Петербурга или покупайте онлайн (отправляем по России и СНГ).
-      </div>
-      <div>
-        <span>Heygrowers — это: </span> Широкий ассортимент. Предлагаем весь
-        арсенал оборудования и расходных материалов для богатого урожая. Удобная
-        доставка. Весь ассортимент доступен с оперативной и недорогой доставкой
-        по Санкт-Петербургу, России, СНГ. Честные цены. Гарантируем равновесие
-        цены и качества. Следим за рынком и всегда стараемся предложить лучшие
-        условия. Экспертная поддержка. Новичок в этом деле? Наши консультанты с
-        удовольствием подскажут, на что обратить внимание. Соберем полный
-        комплект оборудования для гидропоники. Создадим оптимальные условия для
-        здорового роста и идеального плодоношения ваших любимых растений.
-      </div>
-      <div>
-        <span>Наши основные категории:</span> Удобрения, Освещение, Вентиляция,
-        Гидропонные системы, Почва и субстраты, Горшки и емкости, рН, EC, TDS,
-        Гроутенты и гроубоксы, Разное
-      </div>
-    </div>
-    <div class="about__text__btn">Читать подробнее</div>
-  </div>
-</section>
-
-<div class="krel__jivo">
-  <div class="krel__jivo__cont">
-    <div
-      class="krel__jivo__cont__item"
-      style="background-color: rgb(52, 177, 225)"
-    >
-      <img src="assets/templates/img/krel_wiget_telegram.png" alt="" />
-    </div>
-    <div class="krel__jivo__cont__item" style="background-color: #afd80f">
-      <img src="assets/templates/img/krel_wiget_chat.svg" alt="" />
-    </div>
-    <div class="krel__jivo__cont__item" style="background-color: #f2f2f2">
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          x="17.3076"
-          y="19.9998"
-          width="24.4765"
-          height="3.80745"
-          rx="1.90372"
-          transform="rotate(-135 17.3076 19.9998)"
-          fill="black"
-        ></rect>
-        <rect
-          y="17.3075"
-          width="24.4765"
-          height="3.80745"
-          rx="1.90372"
-          transform="rotate(-45 0 17.3075)"
-          fill="black"
-        ></rect>
-      </svg>
-    </div>
-  </div>
-  <div
-    class="krel__jivo__cont__item krel__jivo__btn"
-    style="background-color: #afd80f"
-  >
-    <img src="assets/templates/img/krel_widget_open.svg" alt="" />
   </div>
 </div>
-<script>
-  const aboutTextBtn = document.querySelector('.about__text__btn')
-  aboutTextBtn.onclick = (e) => {
-    const btn = e.target
-    const text = btn.parentNode.children[1]
-    if (text.classList.contains('open')) {
-      text.classList.remove('open')
-      btn.textContent = 'Скрыть текст'
-    } else {
-      text.classList.add('open')
-      btn.textContent = 'Читать подробнее'
-    }
-  }
-</script>
 
 <!--#include virtual="/parts/footer.html" -->

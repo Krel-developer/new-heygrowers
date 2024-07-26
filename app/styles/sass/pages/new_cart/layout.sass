@@ -1,0 +1,42 @@
+.custom_checkout_cart__left
+  width: 1230px
+  display: inline-block
+  vertical-align: top
+  .woocommerce 
+    &:last-child
+      display: flex
+      flex-wrap: wrap
+
+
+.custom_checkout_cart__right
+  width: 410px   
+  position: sticky
+  display: inline-block
+  vertical-align: top
+  top: var(--header-height)
+  margin-left: 15px
+
+
+@media screen and (max-width: 1720px)	  
+  .custom_checkout_cart__left
+    width: 876px
+  .custom_checkout_cart__right
+    width: 394px    
+
+// @media screen and (max-width: 1439px)	  
+//   .custom_checkout_cart__left
+//     width: 760px
+//   .custom_checkout_cart__right
+//     width: 314px  
+
+  
+@media screen and (max-width: 1439px)   
+  .custom_checkout_cart__left
+    width: 100%
+  .custom_checkout_cart__right
+    width: 100%
+    margin-left: 0
+    position: static  
+
+
+

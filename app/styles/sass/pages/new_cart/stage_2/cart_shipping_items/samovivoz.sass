@@ -1,0 +1,53 @@
+.krel__samovivoz
+  display: flex 
+  padding-top: 24px
+  padding-bottom: 49px
+
+  
+
+.krel__samovivoz__btn
+  font-size: 15px
+  line-height: 24px 
+  color: #afd80f
+  border: 1px solid #afd80f
+  padding: 10px 20px 
+  border-radius: 50px
+  margin-right: 24px
+  transition: 0.4s
+  cursor: pointer
+  &:hover 
+    background: #afd80f
+    color: #fff
+
+
+.krel__samovivoz__btn_active
+  background: #afd80f
+  color: #fff
+
+.krel__samovivoz__map
+  overflow: hidden
+  position: relative
+  height: 420px
+  img 
+    position: absolute
+    height: 100%
+    width: auto 
+    left: 50%  
+    transform: translateX(-50%)
+
+
+
+@media screen and (max-width: 991px)	 
+  .krel__samovivoz
+    flex-wrap: wrap
+    padding-bottom: 16px
+  .krel__samovivoz__btn
+    margin-right: 0
+    width: 100%
+    margin-bottom: 16px
+    text-align: center
+    padding: 10px 0
+
+  .krel__samovivoz__map
+    height: 280px  
+

@@ -1,0 +1,138 @@
+.krel_checkout__shipping__contacts
+  padding: 40px
+  padding-bottom: 0
+  background: #fff
+  .krel__checkout__fields
+    padding-top: 0
+
+
+.krel_checkout__shipping__contacts__title
+  font-weight: 700
+  font-size: 36px
+  line-height: 44px
+  margin-bottom: 30px
+
+
+.krel_checkout__shipping__contacts__legal
+  display: flex 
+  flex-wrap: wrap 
+  justify-content: space-between
+  div
+    font-size: 15px
+    line-height: 18px
+    padding: 16px 0 
+    text-align: center 
+    color: #afd80f
+    border: 1px solid #afd80f
+    border-radius: 5px
+    width: calc( 50% - 6px )
+    cursor: pointer
+    transition: 0.4s
+    &:hover 
+      color: #fff
+      background: #afd80f
+
+
+
+div.krel__legal__btn_active
+  color: #fff
+  background: #afd80f
+  
+
+.krel_checkout__shipping__contacts
+  .krel_checkout__shipping__radio
+    margin-right: 30px
+    span
+      padding-left: 29px
+      font-size: 15px
+      line-height: 18px
+      &:after 
+        width: 17px
+        height: 17px
+        top: 2px
+
+
+      &:before 
+        width: 13px
+        height: 13px
+        top: 4px
+        left: 2px
+
+
+.krel__checkout__fields__legal.not_need_validate
+  display: none !important
+
+
+.krel__checkout__payment__methods
+  display: flex
+  flex-wrap: wrap
+
+.krel_checkout__shipping__contacts_gray
+  padding-bottom: 40px
+  padding-top: 0
+
+
+.krel_checkout__shipping__contacts__account
+  width: 100%
+  margin-bottom: 38px
+  label 
+    color: #afd80f
+    text-decoration: underline
+  .krel__checkout__field__title
+    margin-top: 21px
+  .account_password__field
+    margin-bottom: 0  
+
+.krel__checkout__fields.not_need_validate
+  .krel_checkout__shipping__contacts__account 
+    .krel__checkout__fields__column
+      display: none
+
+
+
+@media screen and (max-width: 1720px)   
+  .krel_checkout__shipping__contacts
+    .krel_checkout__shipping__radio
+      margin-right: 10px
+
+@media screen and (max-width: 991px)	 
+  .krel_checkout__shipping__contacts  
+    padding: 17px 24px 24px
+    .krel__checkout__field__title
+      min-height: 36px
+      max-width: 190px
+    .krel_checkout__shipping__radio
+      margin-bottom: 21px
+      display: block 
+      margin-right: 0  
+
+  .krel_checkout__shipping__contacts__title  
+    margin-bottom: 24px
+    font-size: 20px
+    line-height: 24px
+
+@media screen and (max-width: 575px)	  
+  .krel_checkout__shipping__contacts__legal
+    div 
+      width: 100%
+      &:first-child
+        
+        margin-bottom: 16px
+
+    .krel__checkout__fields__column
+      margin-bottom: 30px  
+
+  .krel_checkout__shipping__contacts
+    padding-bottom: 8px
+  .krel_checkout__shipping__contacts_gray
+    background: #fbfbfb
+      
+    .krel__checkout__field__title
+      margin-top: 9px
+      margin-bottom: 30px
+      min-height: auto
+
+  .krel_checkout__shipping__contacts__account 
+    order: 2    
+    margin-top: 49px
+    margin-bottom: 40px

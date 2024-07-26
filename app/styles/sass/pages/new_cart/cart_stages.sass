@@ -1,0 +1,50 @@
+.krel_checkout__stages
+  padding: 16px 35px 17px
+  background: #fff
+  display: flex 
+  margin-bottom: 13px
+  .krel_checkout__stages__cart__count
+    display: none
+
+
+
+.krel_checkout__stages__item
+  margin-right: 141px
+  font-size: 15px
+  line-height: 18px
+  color: #A0A0A0
+  span 
+    display: block
+    font-size: 24px 
+    line-height: 30px 
+
+.krel_checkout__stages__item.kc_active
+  color: #afd80f
+
+
+
+@media screen and (max-width: 767px)	   
+  .krel_checkout__stages
+    padding: 10px 24px 15px 
+    justify-content: space-between
+    .krel_checkout__stages__cart__count
+      margin-top: 21px
+      display: inline-block
+      color: #676A75
+      font-size: 15px
+      line-height: 18px
+      .cart__count
+        margin-left: 0 !important
+
+
+  .krel_checkout__stages__item
+    margin-right: 0
+    font-size: 18px
+    display: none
+
+    span 
+
+      font-size: 20px 
+      line-height: 25px 
+  .krel_checkout__stages__item.kc_active
+    display: block  
