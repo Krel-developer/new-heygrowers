@@ -15,7 +15,7 @@ import { initCookie } from './elements/cookie'
 import { krelLazyLoad } from './elements/lazy'
 import { krelSlider } from '../libs/krel_slider/slider'
 
-// тест 2
+// тест 3
 
 // ленивая загрузка
 document.addEventListener('DOMContentLoaded', function () {
