@@ -181,11 +181,17 @@
         content: 'Цена за ед.' 
     .krel__cart_item__sale__cont
       &:before
-        content: 'Сумма' 
-    .krel__cart_item__subtotal__cont
-      &:before
         content: 'Скидка' 
-    
+    .krel__cart_item__subtotal__cont
+      order: 1
+      &:before
+        content: 'Сумма' 
+      del 
+        display: none  
+    .krel__cart_item__quantity__cont
+      order: 2
+    .product-remove
+      order: 3  
 
 
 

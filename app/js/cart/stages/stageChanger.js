@@ -1,13 +1,14 @@
-import { scrollToElement } from '../scrollToElement'
-import { krelValidateFields } from './cart_validation'
+import { scrollToElement } from '../../elements/scrollToElement'
+import { validateCartFields } from '../cart_fields/cartFieldValidation'
 
-export function krelInitStages() {
+export function initStageChanger() {
+  // кнопки переключения стадий
   const btns = document.querySelectorAll('.custom_checkout_cart__stages__btn')
   if (btns.length) {
     btns.forEach((btn) => {
       btn.addEventListener('click', (e) => {
         const stage = +e.target.dataset.stage
-        if (krelValidateFields()) {
+        if (validateCartFields()) {
           if (stage === 3) {
             // Если стадия 3, прожимается кнопка оформления заказа
             document.querySelector(
@@ -23,8 +24,22 @@ export function krelInitStages() {
     })
   }
 
+  // Устанавливае сстадию, которая прописана в вёрстке(по умолчанию 1 стадия)
   const cart = document.querySelector('.custom_checkout_cart')
   setKrelStage(cart.dataset.stage)
+
+  // отслеживаем дейтвие "назад", и возвращаем на предыдущию стадию
+  window.addEventListener('popstate', (e) => {
+    const url = new URL(document.location.href)
+    const hash = url.hash.split('cart_stage_')[1]
+    if (hash) {
+      setKrelStage(+hash)
+    } else {
+      setKrelStage(
+        document.querySelector('.custom_checkout_cart').dataset.stage
+      )
+    }
+  })
 }
 
 // Переключает корзину на стадию 'stage'
@@ -44,6 +59,7 @@ function setKrelStage(stage) {
 
   const cart = document.querySelector('.custom_checkout_cart')
   cart.dataset.stage = stage
+  setStageInUrl(stage)
 }
 
 const KREL_ACTIVE_CLASS = 'kc_active'
@@ -60,4 +76,10 @@ function krelSetClassToStageElement(stage, className) {
       el.classList.add(KREL_ACTIVE_CLASS)
     }
   })
+}
+
+function setStageInUrl(stage) {
+  const url = new URL(document.location.href)
+  url.hash = 'cart_stage_' + stage
+  history.pushState(null, null, url)
 }

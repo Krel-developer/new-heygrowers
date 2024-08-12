@@ -46,6 +46,10 @@ export function initSdekDelivery() {
       'https://heygrowers.ru/wp-content/themes/new-heygrowers/assets/widget/scripts/template.php', //ссылка на файл template.php на вашем сайте
   })
   widget.binders.add(choosePVZ, 'onChoose')
+  widget.binders.add(readyPVZ, 'onReady')
+
+  document.getElementById('billing_address_2').value = ''
+
   function choosePVZ(wat) {
     const adres = `г. ${wat.cityName}, ${wat.PVZ.Address}`
     document.getElementById(
@@ -62,5 +66,37 @@ export function initSdekDelivery() {
     sdek.dataset.filled = 'true'
   }
 
-  document.getElementById('billing_address_2').value = ''
+  function readyPVZ() {
+    console.log('ready')
+
+    const searchList = document.querySelector('.CDEK-widget__search-list ul')
+
+    if (searchList)
+      searchList.addEventListener('click', (e) => {
+        const li = e.target.closest('li')
+
+        if (li) {
+          const country = li.children[1].textContent.split(', ')[1]
+          console.log(country)
+
+          jQuery('#billing_country_custom').val(country)
+          if (countryMap[country]) {
+            jQuery('#billing_country').val(countryMap[country])
+          } else {
+            jQuery('#billing_country').val('RU')
+            console.log('нет в спеецификации')
+          }
+        }
+      })
+  }
+}
+
+const countryMap = {
+  Россия: 'RU',
+  Казахстан: 'KZ',
+  Армения: 'AM',
+  Беларусь: 'BY',
+  Киргизия: 'KG',
+  Узбекистан: 'UZ',
+  Таджикистан: 'TJ',
 }

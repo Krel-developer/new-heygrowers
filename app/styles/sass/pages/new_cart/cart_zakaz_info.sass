@@ -22,7 +22,7 @@
   background-position: center
 
 .custom_checkout_cart__right__item
-  font-weight: 400
+  font-weight: 500
   font-size: 16px
   line-height: 18px
   color: #A0A0A0
@@ -31,15 +31,28 @@
   justify-content: space-between
   strong 
     font-weight: 500
+    color: #3C4045
   a  
     color: #A0A0A0
   div 
     width: 50%
     &:last-child
       text-align: right
-  .amount
-    &::after
-      content: ' руб.'    
+      color: #3C4045
+      font-weight: 500
+  .woocommerce-Price-currencySymbol
+    display: inline-block !important 
+    margin-left: 5px
+    font-weight: 700
+
+.custom_checkout_cart__right__item_big
+  font-size: 25px
+  line-height: 30px 
+  color: #3C4045 
+  font-weight: 700
+  margin-top: 85px
+
+
 .custom_checkout_cart__right__policy
   font-size: 13px
   line-height: 16px

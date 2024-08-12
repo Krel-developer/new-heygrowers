@@ -1,6 +1,8 @@
-import { scrollToElement } from '../scrollToElement'
+// Тут описана проверка полей формы
 
-export function krelValidateFields() {
+import { scrollToElement } from '../../elements/scrollToElement'
+
+export function validateCartFields() {
   let isValide = true
   const stageCont = document.querySelector(
     '.custom_checkout_cart__stage__block.kc_active'

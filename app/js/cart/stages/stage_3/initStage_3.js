@@ -1,7 +1,7 @@
 import { initCheckoutLegalBtns } from './checkoutLegalBtns'
 import { initAccountField } from './initAccountField'
 
-export function initContactsStage() {
+export function initStage_3() {
   // активируем поле "коментарий"
   const fieldTextArea = document.querySelector(
     '.krel__checkout__field textarea'

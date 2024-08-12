@@ -12,6 +12,12 @@ export function initSamovivozDelivery() {
           .classList.remove('krel__samovivoz__btn_active')
 
         btn.classList.add('krel__samovivoz__btn_active')
+        document
+          .querySelector('.krel__samovivoz__map_active')
+          .classList.remove('krel__samovivoz__map_active')
+        document
+          .querySelector(`.krel__samovivoz__map [data-id="${btn.dataset.id}"]`)
+          .classList.add('krel__samovivoz__map_active')
         magazinField.value = btn.textContent
       })
     })

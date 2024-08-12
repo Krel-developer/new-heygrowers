@@ -45,8 +45,8 @@ export function deliveryTuneDostavkaKurerom() {
   if (kurerBtn) {
     if (document.getElementById('shipping_method_0_flat_rate-2')) {
       kurerBtnInput.value = 'shipping_method_0_flat_rate-2'
-    } else if (document.getElementById('shipping_method_0_flat_rate-1')) {
-      kurerBtnInput.value = 'shipping_method_0_flat_rate-1'
+    } else if (document.getElementById('shipping_method_0_flat_rate-11')) {
+      kurerBtnInput.value = 'shipping_method_0_flat_rate-11'
     } else {
       kurerBtn.style.display = 'none'
     }

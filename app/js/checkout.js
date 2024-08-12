@@ -1,14 +1,15 @@
-import initCartFields from './elements/cart/initCartFields'
-import { krelInitStages } from './elements/cart/initStages'
+import initCartFields from './cart/cart_fields/initCartFields'
+import { krelInitStages } from './cart/stages/initStages'
 import { krelToast } from '../libs/krel-toast/krel-toast'
-import { initDaDataOptions } from './elements/cart/daDataOptions'
-import { initCartEvents } from './elements/cart/initCartEvents'
+import { initDaDataOptions } from './cart/daDataOptions'
+import { initCartEvents } from './cart/initCartEvents'
 
 document.addEventListener('DOMContentLoaded', () => {
   // подключаем уведомления
   window.krelToast = krelToast
 
   initCartFields()
+
   krelInitStages()
 
   initCartEvents()
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100)
   })
 
-  initThankyou()
+  // initThankyou()
 })
 
 function initThankyou() {

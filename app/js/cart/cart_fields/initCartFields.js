@@ -1,6 +1,3 @@
-import { initContactsStage } from './initContactsStage'
-import { initDeliveryStage } from './initDeliveryStage'
-
 export default function initCartFields() {
   // Перебираем вссе поля и инитируем  связь с оригинальными полями
   const fields = document.querySelectorAll('.krel__checkout__field input')
@@ -41,12 +38,6 @@ export default function initCartFields() {
       }
     })
   }
-
-  // Активируем поля для шага "Доставка"
-  initDeliveryStage()
-
-  // Активируем поля для шага "Контактная информация"
-  initContactsStage()
 }
 
 // Ставим значение оригнального поля псевдополю
