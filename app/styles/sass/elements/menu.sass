@@ -15,8 +15,9 @@
   
   ul 
     overflow-y: auto
-    @include scrollbars(10px, #3C4045, #E0E0E0, 10px) 
     height: 100%
+    @include scrollbars(10px, #3C4045, #E0E0E0, 10px) 
+
   li
     margin-bottom: 15px
   .container 
@@ -136,10 +137,12 @@
   opacity: 1
 .catalog__list__right
   width: 613px  
-  @include scrollbars(10px, #3C4045, #E0E0E0, 10px) 
   overflow-y: auto  
   padding-right: 20px
   margin-right: -20px
+
+.catalog__list__right
+  @include scrollbars(10px, #3C4045, #E0E0E0, 10px) 
 
 @media screen and (max-width: 1720px)
 

@@ -85,7 +85,7 @@
             line-height: 22px
         .button   
           padding: 9px 0px   
-        #sbw_wc-adding-button-archive
+        .sbw_wc-adding-button-archive
           order: -1
           
           width: 178px
@@ -135,7 +135,7 @@
   display: none
 
 .custom__product.outofstock  
-  #sbw_wc-adding-button-archive
+  .sbw_wc-adding-button-archive
     display: none
   .button
     width: 100%  
@@ -199,6 +199,7 @@
         .categories
           font-size: 12px
           line-height: 16px
+          height: 32px
         .product__img
           height: 100px
         .product__info
@@ -212,7 +213,8 @@
         .product__btn 
           display: flex
           justify-content: space-between
-          #sbw_wc-adding-button-archive
+          margin-top: 9px
+          .sbw_wc-adding-button-archive
             width: calc(100% - 40px)  
             margin-right: 7px
             
@@ -230,6 +232,8 @@
               font-size: 12px
               line-height: 16px  
 
+  .price_out_of_stock
+    height: 20px
 @media screen and (max-width: 991px)    
   .custom__products
     .products 
@@ -261,3 +265,27 @@
         .price
           &:after 
             content: 'руб.'
+
+
+
+
+@media screen and (min-width: 1200px)   
+  .custom__products
+    .products 
+      .custom__product
+        .product__img
+          height: 200px
+        .woocommerce-loop-product__title
+          font-size: 17px
+          line-height: 20px
+          font-weight: 500
+          margin: 12px 0
+          height: max-content
+          height: 60px
+
+        .categories
+          font-size: 16px
+          line-height: 19px
+          height: 38px
+  
+     

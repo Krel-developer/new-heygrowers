@@ -1,3 +1,4 @@
+import { krelMaskInput } from '../../../../libs/krelMaskInput'
 import { initCheckoutLegalBtns } from './checkoutLegalBtns'
 import { initAccountField } from './initAccountField'
 
@@ -12,7 +13,6 @@ export function initStage_3() {
       document.getElementById('order_comments').value = fieldTextArea.value
     })
   }
-
   // активируем маску для поля "Номер телефона"
   krelMaskInput('billing_phone__custom', '(999) 999-99-99')
 

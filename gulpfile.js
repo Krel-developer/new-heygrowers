@@ -1,7 +1,7 @@
 let preprocessor = 'sass', // Preprocessor (sass, less, styl); 'sass' also work with the Scss syntax in blocks/ folder.
   fileswatch = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
 const myDest =
-  '../../domains/new-heygrowers/wp-content/themes/new-heygrowers/assets/templates/'
+  '../../domains/local-heygrowers/wp-content/themes/new-heygrowers/assets/templates/'
 
 // const myDest = 'app/assets/templates/'
 

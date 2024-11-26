@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // иницицилизвция элемента изменения количества товара
   window.quantityFunction = quntityInit()
-  window.krelMaskInput = krelMaskInput
+  // window.krelMaskInput = krelMaskInput
 
   // попап обратный звонок
   krelPopup('.recall__btn', { anim: 'top' })
