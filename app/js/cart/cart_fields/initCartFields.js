@@ -1,3 +1,5 @@
+import { krelYmGoal } from '../../elements/krelYmInterface'
+
 export default function initCartFields() {
   // Перебираем вссе поля и инитируем  связь с оригинальными полями
   const fields = document.querySelectorAll('.krel__checkout__field input')
@@ -28,6 +30,10 @@ export default function initCartFields() {
             parent.value = '+7 ' + field.value
           } else {
             parent.value = field.value
+          }
+
+          if (field.closest('[data-stage="3"]')) {
+            krelYmGoal('nachalo-zapoln')
           }
         })
         if (parentId === 'billing_phone') {

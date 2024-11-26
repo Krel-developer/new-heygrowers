@@ -1,3 +1,4 @@
+import { krelYmGoal } from '../../elements/krelYmInterface'
 import { scrollToElement } from '../../elements/scrollToElement'
 import { validateCartFields } from '../cart_fields/cartFieldValidation'
 
@@ -59,6 +60,12 @@ function setKrelStage(stage) {
 
   const cart = document.querySelector('.custom_checkout_cart')
   cart.dataset.stage = stage
+
+  if (stage == 2) {
+    krelYmGoal('vibor-dost')
+  } else if (stage == 3) {
+    krelYmGoal('zapolnenie')
+  }
   setStageInUrl(stage)
 }
 
